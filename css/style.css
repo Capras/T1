@@ -1,10 +1,10 @@
 
 
   .table {
-  background: LightGrey;
-  width: 22%;
-height: 209%;
-float:left;
+   background: LightGrey;
+   width: 22%;
+   height: 209%;
+   float:left;
 }
 
 .picture {
@@ -16,8 +16,8 @@ float:left;
 
 }
 .Contact {
-text-align: center;
-margin-top:0;
+ text-align: center;
+ margin-top:0;
 }
 
 }
@@ -30,7 +30,7 @@ margin-top:0;
 
 .rectangle1 {
 	width: 600px;
-    height: 210px;
+  height: 210px;
 	background: DarkSeaGreen;
   text-align: center;
   margin: auto;
@@ -39,41 +39,44 @@ margin-top:0;
   border: solid black 2px;
 }
 
-.rectangle3 {
+.rectangle2 {
 	width: 400px;
   height: 80px;
 	background: DarkSeaGreen;
-   text-align: middle;
+  text-align: middle;
   font-size: 16;
 
 }
+.center {
+  text-align: center;
+}
 
 .ribbon span {
-     content: "rectangle2";
-     display: block;
-     width: 20px;
-     height: 20px;
+  content: "rectangle2";
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 .center{
-  margin: auto;
+ margin: auto;
 }
 
 
 .Orate {
  text-align: left;
-text-align: bottom;
+ text-align: bottom;
  font-size: 15;
  padding-top: 1%;
 }
 
 .title1 {
-  text-align: left;
-  font-style:italic;
-  font-size: 12pt;
+ text-align: left;
+ font-style:italic;
+ font-size: 12pt;
 }
 
 .title1 description {
-font-size: 9;
+ font-size: 9;
 }
 
 .oratelist {
@@ -84,15 +87,15 @@ font-size: 9;
 
 .unfoundation {
  text-align: left;
-text-align: bottom;
+ text-align: bottom;
  font-size: 15;
  padding-top: 1%;
 }
 
 .title2 {
-  text-align: left;
-  font-style:italic;
-  font-size: 12pt;
+ text-align: left;
+ font-style:italic;
+ font-size: 12pt;
 }
 
 .description2 {
@@ -107,7 +110,7 @@ font-size: 9;
 
 .CEB {
  text-align: left;
-text-align: bottom;
+ text-align: bottom;
  font-size: 15;
  padding-top: 1%;
 }
@@ -119,7 +122,7 @@ text-align: bottom;
 }
 
 .description3 {
-font-size: 9;
+ font-size: 9;
 }
 
 
