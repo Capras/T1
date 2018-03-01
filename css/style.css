@@ -6,6 +6,15 @@
 height: 200%;
 float:left;
 }
+
+.picture {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  align-items: top;
+}
+
+}
 .Contact {
 text-align: center;
 margin-top:0;
@@ -95,4 +104,60 @@ font-size: 9;
   margin: 0;
   margin: 0 auto;
   font-size:14;
+}
+
+.CEB {
+ text-align: left;
+text-align: bottom;
+ font-size: 15;
+ padding-top: 1%;
+}
+
+.title3 {
+  text-align: left;
+  font-style:italic;
+  font-size: 12pt;
+}
+
+.description3 {
+font-size: 9;
+}
+
+
+
+.CEBlist {
+  margin: 0;
+  margin: 0 auto;
+  font-size:14;
+}
+
+.rectangle4 {
+	width: 600px;
+  height: 40px;
+	background: DarkSeaGreen;
+  text-align:center;
+}
+
+.rectanglefont {
+  font-size: 16;
+  font-style: bold;
+  vertical-align: middle;
+}
+
+.boardmember {
+ margin: 0;
+ margin: 0 auto;
+ font-size:14;
+}
+
+.boardmember {
+ margin: 0;
+ margin: 0 auto;
+ font-size:14;
+}
+
+.startupmentor {
+ margin: 0;
+ margin: 0 auto;
+ font-size:14;
 }
