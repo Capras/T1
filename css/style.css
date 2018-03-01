@@ -3,7 +3,7 @@
   .table {
   background: LightGrey;
   width: 22%;
-height: 200%;
+height: 209%;
 float:left;
 }
 
@@ -35,12 +35,13 @@ margin-top:0;
   text-align: center;
   margin: auto;
   height: 210px;
+  width: 50%;
   font-size: 55;
   border: solid black 2px;
 }
 
 .rectangle3 {
-	width: 600px;
+	width: 400px;
   height: 80px;
 	background: DarkSeaGreen;
    text-align: center;
