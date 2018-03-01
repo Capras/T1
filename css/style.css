@@ -30,11 +30,10 @@ margin-top:0;
 
 .rectangle1 {
 	width: 600px;
-	height: 100px;
+    height: 210px;
 	background: DarkSeaGreen;
   text-align: center;
   margin: auto;
-  height: 210px;
   width: 50%;
   font-size: 55;
   border: solid black 2px;
@@ -44,8 +43,7 @@ margin-top:0;
 	width: 400px;
   height: 80px;
 	background: DarkSeaGreen;
-   text-align: center;
-   text-align: bottom;
+   text-align: middle;
   font-size: 16;
 
 }
