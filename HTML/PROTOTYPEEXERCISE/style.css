@@ -1,15 +1,241 @@
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-.clearfix {
-  *zoom: 1;
+/*section 1*/
+*
+{
+    margin: 0;
+    padding: 0;
 }
 
-[hidden] {
-  display: none;
+
+ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+li
+{
+    display: inline;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+nav
+{
+    color: black;
+}
+
+.brand
+{
+  padding-top: 200px;
+}
+
+#unity
+{
+  color:white;
+  text-align: center;
+  width:100px;
+  padding: 10px;
+  font-size: 18px;
+  border: solid 1px;
+}
+.container
+{
+    width: 100%;
+    height: 100vh;
+}
+.container.background1
+{
+    height: 1266px;
+    background-image: url('IMAGES/pageone/BACKGROUND1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container.font
+{
+    margin-top: -157px;
+}
+
+#honor
+{
+  font-size: 20px;
+  color: rgb(255, 168, 0);
+  text-transform: uppercase;
+  position: absolute;
+  left: 526px;
+  top: 576px;
+}
+
+h4
+{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  position: absolute;
+  left: 269px;
+  top: 629px;
+}
+
+.arrow
+{
+  position: absolute;
+  top:200px;
+  color:white;
+  top: 974px;
+  right: 612px;
+
+}
+.nav
+{
+  margin-top:30px;
+}
+
+.nav a
+{
+  color:white;
+  text-decoration: none;
+}
+
+.threesidesquare
+{
+position: absolute;
+color:white;
+top: 853px;
+right: 591px;
+
+}
+.arrow
+{
+position: absolute;
+color:white;
+}
+
+.scroll
+{
+position: absolute;
+color:white;
+top: 914px;
+right: 592px;
+text-transform: uppercase;
+}
+
+.sidesocial
+{
+    position: absolute;
+    top: 450px;
+    right: -192px;
+    transform: rotate(-90deg);
+}
+
+.sidesocial a
+{
+  color:white;
+  text-decoration: none;
+}
+
+.phoneimage
+{
+  position: absolute;
+  top: 0px;
+  right:33px;
+}
+
+.purple
+{
+  width: 100%;
+  height: 100vh;
+  background-color:rgb(105, 79, 202);
+}
+
+#complexity
+{
+  position: relative;
+  top: 367px;
+  left: 220px;
+  text-align: left;
+  font-size: 50px;
+  color:white;
+}
+
+.complexityparagraph
+{
+  position: relative;
+  top: 367px;
+  left: 590px;
+  text-align: left;
+  font-size: 20px;
+  color: white;
+}
+
+
+.paintbrushes
+{
+  width: 912px;
+  height: 565px;
+  position: absolute;
+  top: 1037px;
+  left: 226px;
+}
+
+.graycity
+{
+  height: 900px;
+  background-image: url('IMAGES/WE LOVE OUR CLIENTS/WeAreUnity.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background position: center;
+  background-size:cover;
+}
+
+.roundbutton
+{
+  color: black;
+    position: relative;
+    top: -580px;
+    left: 520px;
+    width: 200px;
+
+}
+
+.group2
+{
+  position: absolute;
+  width: 764px;
+  height: 485px;
+  left: 290px;
+  top: 2653px;
+  }
+
+/* .white
+{
+  background-size: cover;
+  margin-top: 100px;
+  height: 250px;
+  background-color: pink;
+} */
+
+.maninbox
+{
+  width: 981px;
+  height: 472px;
+  left: 120px;
+  position: absolute;
+  top: 3200px;
+}
+
+.winter{
+  height:1400px;
+  background-image: url("IMAGES/winter/layer0.png");
+  background-position: left bottom; /*Positioning*/
+  background-repeat: no-repeat; /*Prevent showing multiple background images*/
+  background-size: cover;
+}
+
+.footer
+{
+  background-size: cover;
+  height:140px;
+  background-color: black;
 }
