@@ -1,4 +1,22 @@
 /*section 1*/
+@font-face {
+    font-family: 'Abraham Lincoln';
+    src: url('../fonts/abrahamlincoln-webfont.woff2') format('woff2'),
+         url('../fonts/abrahamlincoln-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('../fonts/GothamBlack.woff2') format('woff2'),
+        url('../fonts/GothamBlack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *
 {
     margin: 0;
@@ -60,22 +78,24 @@ nav
 
 #honor
 {
-  font-size: 20px;
+  font-size: 73px;
   color: rgb(255, 168, 0);
   text-transform: uppercase;
   position: absolute;
-  left: 526px;
-  top: 576px;
+  left: 439px;
+  top: 573px;
+  font-family:"Abraham Lincoln", Time New Roman;
 }
 
-h4
+#webring
 {
-  font-size: 20px;
+  font-size: 28px;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   position: absolute;
-  left: 269px;
-  top: 629px;
+  left: 369px;
+  top: 639px;
+  font-family:"Abraham Lincoln", Time New Roman;
 }
 
 .arrow
@@ -84,7 +104,7 @@ h4
   top:200px;
   color:white;
   top: 974px;
-  right: 612px;
+  right: 642px;
 
 }
 .nav
@@ -103,13 +123,8 @@ h4
 position: absolute;
 color:white;
 top: 853px;
-right: 591px;
+right: 619px;
 
-}
-.arrow
-{
-position: absolute;
-color:white;
 }
 
 .scroll
@@ -117,7 +132,7 @@ color:white;
 position: absolute;
 color:white;
 top: 914px;
-right: 592px;
+right: 619px;
 text-transform: uppercase;
 }
 
@@ -145,38 +160,108 @@ text-transform: uppercase;
 .purple
 {
   width: 100%;
-  height: 100vh;
+  height: 154vh;
   background-color:rgb(105, 79, 202);
+}
+
+.paintbrushes
+{
+  width: 912px;
+height: 565px;
+margin: -208px auto;
+margin-left: 170px;
+}
+
+.gradcapgroup
+{
+position:relative;
+top: 331px;
+}
+
+.bottomlines
+{
+  position:relative;
+  bottom:-443px;
 }
 
 #complexity
 {
   position: relative;
-  top: 367px;
-  left: 220px;
+  display: inline-block;
+  width: 35%;
   text-align: left;
-  font-size: 50px;
-  color:white;
+  letter-spacing: 3px;
+  line-height: 70px;
+  font-size: 79px;
+  color: rgb(255, 255, 255);
+  stretch: 20px;
+  font-family: "Abraham Lincoln", Times New Roman;
 }
 
+.purplemiddle{
+  width: 70%;
+  height: auto;
+  position: relative;
+  margin-top: 200px;
+}
+
+.column-wrapper{
+  width: 80%;
+  margin: 15px auto;
+}
+
+.column{
+  width: 25%;
+  display: inline-block;
+}
 .complexityparagraph
 {
   position: relative;
-  top: 367px;
-  left: 590px;
+  display: inline-block;
+  width: 60%;
   text-align: left;
-  font-size: 20px;
-  color: white;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
 }
 
-
-.paintbrushes
+.whiteline
 {
-  width: 912px;
-  height: 565px;
+  width:45px;
+  height:0px;
+  background-color: white;
+  position: relative;
+  top: 499px;
+  left: -438px;
+}
+#handmade
+{
+ position: relative;
+ font-size: 29px;
+ color: rgb(255, 168, 0);
+ text-transform: uppercase;
+ font-family:"Abraham Lincoln", Time New Roman;
+}
+
+.connect
+{
+ position:relative;
+}
+
+/* .connectparagraph
+{
   position: absolute;
-  top: 1037px;
-  left: 226px;
+  top: 2070px;
+left: 167px;
+  font-family: "Poppins",sans-serif;
+  font-size: 11px;
+  text-align:left:
+} */
+
+.adjacentlines
+{
+position: relative;
+top: 418px;
 }
 
 .graycity
