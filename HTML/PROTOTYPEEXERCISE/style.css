@@ -28,7 +28,7 @@ ul
 {
     margin: 0;
     padding: 0;
-
+    margin-left: -46px;
     list-style-type: none;
 }
 
@@ -57,6 +57,8 @@ nav
   padding: 10px;
   font-size: 18px;
   border: solid 1px;
+  padding: 10px;
+  margin-left:-29px;
 }
 .container
 {
@@ -116,6 +118,7 @@ nav
 {
   color:white;
   text-decoration: none;
+  font-family:"Abraham Lincoln", Time New Roman;
 }
 
 .threesidesquare
@@ -140,7 +143,7 @@ text-transform: uppercase;
 {
     position: absolute;
     top: 450px;
-    right: -192px;
+    right: -114px;
     transform: rotate(-90deg);
 }
 
@@ -148,6 +151,7 @@ text-transform: uppercase;
 {
   color:white;
   text-decoration: none;
+  font-family:"Abraham Lincoln", Time New Roman;
 }
 
 .phoneimage
@@ -160,28 +164,36 @@ text-transform: uppercase;
 .purple
 {
   width: 100%;
-  height: 154vh;
+  height: 169vh;
   background-color:rgb(105, 79, 202);
+}
+
+.purplecolumn
+{
+  width: 25%;
+  display: inline-block;
+  font-family: "Abraham Lincoln", Time New Roman;
+  text-align: left;
+  color:white;
+}
+
+.invites
+{
+font-size:60px;
 }
 
 .paintbrushes
 {
-  width: 912px;
-height: 565px;
-margin: -208px auto;
-margin-left: 170px;
-}
-
-.gradcapgroup
-{
-position:relative;
-top: 331px;
+  width: 919px;
+  height: 565px;
+  margin: -208px auto;
+  margin-left: 142px;
 }
 
 .bottomlines
 {
   position:relative;
-  bottom:-443px;
+  bottom:-105px;
 }
 
 #complexity
@@ -195,34 +207,75 @@ top: 331px;
   font-size: 79px;
   color: rgb(255, 255, 255);
   stretch: 20px;
-  font-family: "Abraham Lincoln", Times New Roman;
+  font-family: "Abraham Lincoln", Time New Roman;
 }
 
-.purplemiddle{
+.purplemiddle
+{
   width: 70%;
   height: auto;
   position: relative;
   margin-top: 200px;
 }
 
-.column-wrapper{
+/* .column-wrapper{
   width: 80%;
   margin: 15px auto;
+} */
+.column-wrapper
+{
+ width: 104%;
+ margin-top: 65px;
+ margin-left: 86px;
 }
 
 .column{
   width: 25%;
   display: inline-block;
+  font-family: "Poppins",sans-serif;
+  font-size: 11px;
+  text-align: left;
+  color:white;
+
 }
+
 .complexityparagraph
 {
   position: relative;
   display: inline-block;
+  top:-78px;
   width: 60%;
   text-align: left;
   font-size: 15px;
   color: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
+}
+
+#handmade
+{
+ position: relative;
+ font-size: 29px;
+ color: rgb(255, 168, 0);
+ text-transform: uppercase;
+ font-family:"Abraham Lincoln", Time New Roman;
+}
+
+#gradcaptitle
+{
+ position: relative;
+ font-size: 29px;
+ color: rgb(255, 168, 0);
+ text-transform: uppercase;
+ font-family:"Abraham Lincoln", Time New Roman;
+}
+
+#tools
+{
+ position: relative;
+ font-size: 29px;
+ color: rgb(255, 168, 0);
+ text-transform: uppercase;
+ font-family:"Abraham Lincoln", Time New Roman;
 }
 
 .whiteline
@@ -233,19 +286,6 @@ top: 331px;
   position: relative;
   top: 499px;
   left: -438px;
-}
-#handmade
-{
- position: relative;
- font-size: 29px;
- color: rgb(255, 168, 0);
- text-transform: uppercase;
- font-family:"Abraham Lincoln", Time New Roman;
-}
-
-.connect
-{
- position:relative;
 }
 
 /* .connectparagraph
@@ -258,27 +298,37 @@ left: 167px;
   text-align:left:
 } */
 
-.adjacentlines
-{
-position: relative;
-top: 418px;
-}
-
 .graycity
 {
-  height: 900px;
+  height: 941px;
   background-image: url('IMAGES/WE LOVE OUR CLIENTS/WeAreUnity.png');
   background-repeat: no-repeat;
   background-size: cover;
   background position: center;
   background-size:cover;
 }
+#ourclients
+{
+ position:relative;
+ margin:auto;
+ font-family:"Abraham Lincoln", Time New Roman;
+ text-transform: uppercase;
+ font-size: 68px;
+ top: 171px;
+ right: -9px;
+}
 
+.takepride
+{
+  margin-top:194px;
+  font-family: "Poppins",sans-serif;
+  font-size:15px;
+}
 .roundbutton
 {
   color: black;
     position: relative;
-    top: -580px;
+    top: -895px;
     left: 520px;
     width: 200px;
 
@@ -286,11 +336,11 @@ top: 418px;
 
 .group2
 {
-  position: absolute;
-  width: 764px;
-  height: 485px;
-  left: 290px;
-  top: 2653px;
+ position: relative;
+ width: 797px;
+ height: 485px;
+ left: 85px;
+ top: -201px;
   }
 
 /* .white
@@ -303,11 +353,12 @@ top: 418px;
 
 .maninbox
 {
-  width: 981px;
-  height: 472px;
-  left: 120px;
-  position: absolute;
-  top: 3200px;
+ width: 981px;
+ height: 472px;
+ left: 120px;
+ position: relative;
+ margin: auto;
+ top: -63px;
 }
 
 .winter{
