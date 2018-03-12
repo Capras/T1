@@ -1,20 +1,20 @@
 /*section 1*/
-@font-face {
+@font-face
+{
     font-family: 'Abraham Lincoln';
     src: url('../fonts/abrahamlincoln-webfont.woff2') format('woff2'),
          url('../fonts/abrahamlincoln-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-@font-face {
+@font-face
+{
     font-family: 'Gotham Black';
     src: url('../fonts/GothamBlack.woff2') format('woff2'),
         url('../fonts/GothamBlack.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 *
@@ -23,13 +23,18 @@
     padding: 0;
 }
 
+.wrapper
+{
+  /* width:1920px; */
+}
 
 ul
 {
     margin: 0;
     padding: 0;
-    margin-left: -46px;
+    margin-left: 3px;
     list-style-type: none;
+    font-weight: 100;
 }
 
 li
@@ -37,37 +42,42 @@ li
     display: inline;
     margin-right: 20px;
     margin-left: 20px;
+    padding-left: 18px;
 }
 
 nav
 {
     color: black;
+    font-size:20px;
 }
 
 .brand
 {
   padding-top: 200px;
+  padding-bottom: 50px;
 }
 
-#unity
+.brand h1
 {
-  color:white;
+  color: white;
   text-align: center;
-  width:100px;
+  font-weight: normal;
+  font-style: normal;
+  width: 89px;
   padding: 10px;
-  font-size: 18px;
-  border: solid 1px;
-  padding: 10px;
-  margin-left:-29px;
+  font-size: 26px;
+  font-family: "Gill Sans";
+  border: 1px solid;
+  border-width: 2;
+  padding: 7px;
+  letter-spacing: 2px;
+  font-weight: 620;
 }
-.container
-{
-    width: 100%;
-    height: 100vh;
-}
+
 .container.background1
 {
-    height: 1266px;
+    height: 1920px;
+    width: 1920px;
     background-image: url('IMAGES/pageone/BACKGROUND1.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,18 +85,19 @@ nav
 
 .container.font
 {
-    margin-top: -157px;
+    margin-top: -25px;
 }
 
 #honor
 {
-  font-size: 73px;
+  font-size: 87px;
   color: rgb(255, 168, 0);
   text-transform: uppercase;
   position: absolute;
-  left: 439px;
-  top: 573px;
-  font-family:"Abraham Lincoln", Time New Roman;
+  left: 748px;
+  font-weight: 100;
+  top: 880px;
+  font-family: "Abraham Lincoln", Time New Roman;
 }
 
 #webring
@@ -95,23 +106,17 @@ nav
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   position: absolute;
-  left: 369px;
-  top: 639px;
-  font-family:"Abraham Lincoln", Time New Roman;
+  left: 629px;
+  top: 982px;
+  font-family: "Abraham Lincoln", Time New Roman;
+  letter-spacing: 3px;
+  font-weight: 200;
 }
-
-.arrow
-{
-  position: absolute;
-  top:200px;
-  color:white;
-  top: 974px;
-  right: 642px;
 
 }
 .nav
 {
-  margin-top:30px;
+  margin-top:21px;
 }
 
 .nav a
@@ -123,28 +128,41 @@ nav
 
 .threesidesquare
 {
-position: absolute;
-color:white;
-top: 853px;
-right: 619px;
+  position: absolute;
+  color: white;
+  top: 1325px;
+  right: 356px;
 
 }
 
 .scroll
 {
-position: absolute;
-color:white;
-top: 914px;
-right: 619px;
-text-transform: uppercase;
+  position: absolute;
+  color: white;
+  top: 1388px;
+  right: 341px;
+  letter-spacing: 5px;
+  font-family: "abraham lincoln";
+  font-size: 27px;
+  text-transform: uppercase;
+}
+
+.arrow
+{
+  position: absolute;
+  color: white;
+  top: 1473px;
+  right: 379px;
 }
 
 .sidesocial
 {
-    position: absolute;
-    top: 450px;
-    right: -114px;
-    transform: rotate(-90deg);
+  position: absolute;
+  top: 626px;
+  right: -114px;
+  right: -600px;
+  font-size: 20px;
+  transform: rotate(-90deg);
 }
 
 .sidesocial a
@@ -158,56 +176,63 @@ text-transform: uppercase;
 {
   position: absolute;
   top: 0px;
-  right:33px;
+  right: -391px;
+  height: 280px;
+  width: 4em;
+  width: 4%;
 }
 
 .purple
 {
-  width: 100%;
-  height: 169vh;
+  width: 1920px;
+  height: 1340px;
   background-color:rgb(105, 79, 202);
-}
-
-.purplecolumn
-{
-  width: 25%;
-  display: inline-block;
-  font-family: "Abraham Lincoln", Time New Roman;
-  text-align: left;
-  color:white;
-}
-
-.invites
-{
-font-size:60px;
 }
 
 .paintbrushes
 {
-  width: 919px;
-  height: 565px;
-  margin: -208px auto;
-  margin-left: 142px;
+  width: 1413px;
+  height: 1000;
+  margin: -320px auto;
+  margin-left: 204px;
 }
 
-.bottomlines
+
+.purplecolumn
 {
-  position:relative;
-  bottom:-105px;
+  width: 32%;
+  margin: -132px;
+  display: inline-block;
+  font-family: "Abraham Lincoln", Time New Roman;
+  text-align: left;
+  color: white;
+}
+
+.invites
+{
+font-size:100px
+}
+
+.headingthree
+{
+
+ font-size: 30px;
 }
 
 #complexity
 {
   position: relative;
   display: inline-block;
-  width: 35%;
+  width: 30%;
   text-align: left;
+  margin-left: -733px;
+  margin-top: -100px;
   letter-spacing: 3px;
   line-height: 70px;
   font-size: 79px;
   color: rgb(255, 255, 255);
-  stretch: 20px;
   font-family: "Abraham Lincoln", Time New Roman;
+  font-weight: 100;
 }
 
 .purplemiddle
@@ -215,163 +240,620 @@ font-size:60px;
   width: 70%;
   height: auto;
   position: relative;
-  margin-top: 200px;
+  margin: 200px auto;
 }
 
-/* .column-wrapper{
-  width: 80%;
-  margin: 15px auto;
-} */
+.compparagraphcolumn
+{
+  margin-top:20px;
+}
+
+.complexityparagraph
+{
+  font-family: "Poppins",sans-serif;
+  color: white;
+  display: inline-block;
+  width: 73%;
+  text-align: left;
+  margin-left: 500px;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
 .column-wrapper
 {
- width: 104%;
- margin-top: 65px;
- margin-left: 86px;
+  width: 158%;
+  margin-top: 65px;
+  margin-left: -172px;
+
 }
 
-.column{
+.column
+{
   width: 25%;
   display: inline-block;
   font-family: "Poppins",sans-serif;
   font-size: 11px;
   text-align: left;
   color:white;
-
 }
 
-.complexityparagraph
-{
-  position: relative;
-  display: inline-block;
-  top:-78px;
-  width: 60%;
-  text-align: left;
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-  font-family: "Poppins", sans-serif;
-}
-
-#handmade
+#workheading
 {
  position: relative;
  font-size: 29px;
  color: rgb(255, 168, 0);
  text-transform: uppercase;
  font-family:"Abraham Lincoln", Time New Roman;
+ margin-bottom: 5px;
 }
 
-#gradcaptitle
+.miniparagraph
 {
- position: relative;
- font-size: 29px;
- color: rgb(255, 168, 0);
- text-transform: uppercase;
- font-family:"Abraham Lincoln", Time New Roman;
-}
-
-#tools
-{
- position: relative;
- font-size: 29px;
- color: rgb(255, 168, 0);
- text-transform: uppercase;
- font-family:"Abraham Lincoln", Time New Roman;
+  line-height:2;
 }
 
 .whiteline
 {
-  width:45px;
+  width:44px;
   height:0px;
   background-color: white;
   position: relative;
-  top: 499px;
-  left: -438px;
+  margin-top:10px;
+  margin-bottom: 28px;
 }
 
-/* .connectparagraph
+.bottomlines
 {
-  position: absolute;
-  top: 2070px;
-left: 167px;
-  font-family: "Poppins",sans-serif;
-  font-size: 11px;
-  text-align:left:
-} */
+  position:relative;
+  bottom:-20px;
+}
 
 .graycity
 {
-  height: 941px;
+  width: 1920px;
+  height:897px;
   background-image: url('IMAGES/WE LOVE OUR CLIENTS/WeAreUnity.png');
   background-repeat: no-repeat;
   background-size: cover;
   background position: center;
-  background-size:cover;
+  height: 1462px;
 }
 #ourclients
 {
- position:relative;
- margin:auto;
- font-family:"Abraham Lincoln", Time New Roman;
- text-transform: uppercase;
- font-size: 68px;
- top: 171px;
- right: -9px;
+  position: relative;
+  letter-spacing: 3px;
+  font-family: "Abraham Lincoln", Time New Roman;
+  text-transform: uppercase;
+  font-size: 90px;
+  top: 277px;
+  right: 19px;
 }
 
 .takepride
 {
-  margin-top:194px;
+  margin-top: 287px;
+  margin-left: -15px;
   font-family: "Poppins",sans-serif;
-  font-size:15px;
+  font-size: 22px;
+  font-weight: 100;
 }
 .roundbutton
 {
   color: black;
-    position: relative;
-    top: -895px;
-    left: 520px;
-    width: 200px;
-
+  width: 227px;
+  margin-top: 56px;
+  margin-left: -14px;
 }
 
 .group2
 {
- position: relative;
- width: 797px;
- height: 485px;
- left: 85px;
- top: -201px;
+  position: relative;
+  width: 1196px;
+  height: 1000px;
+  margin-left: 149px;
+  margin-top: 372px;
   }
 
-/* .white
-{
-  background-size: cover;
-  margin-top: 100px;
-  height: 250px;
-  background-color: pink;
-} */
+  .twocolumn
+  {
+    width: 33%;
+    margin-left: -50px;
+    font-family: "Abraham Lincoln", Time New Roman;
+    text-align: right;
+    color: black;
+    margin-top: -515px;
+  }
 
-.maninbox
+  .honoragain
+  {
+    font-size: 98px;
+    margin-top: 37px;
+  }
+
+.globalservice
 {
- width: 981px;
- height: 472px;
- left: 120px;
- position: relative;
- margin: auto;
- top: -63px;
+font-size: 30px;
 }
 
-.winter{
-  height:1400px;
-  background-image: url("IMAGES/winter/layer0.png");
-  background-position: left bottom; /*Positioning*/
-  background-repeat: no-repeat; /*Prevent showing multiple background images*/
-  background-size: cover;
+.whatwedo
+{
+  width: 32%;
+  margin-left: 330px;
+  text-align: left;
+  z-index: 10000;
+  margin-top: 300px;
+  position: absolute;
 }
 
-.footer
+.whatwedo b
 {
-  background-size: cover;
-  height:140px;
+  font-family: "Abraham Lincoln", Time New Roman;
+  color: rgb(255, 168, 0);
+  font-size:60px;
+}
+
+.whatwedo p
+{
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", Time New Roman;
+  position: relative;
+  z-index: 10000;
+  width: 387px;
+  top: 709px;
+  left: 415px;
+  line-height: 34px;
+}
+
+.although
+{
+  font-family: "Abraham Lincoln", Time New Roman;
+  color: black;
+  font-size: 20px;
+  margin-top: 230px;
+  z-index: 1000000;
+
+}
+
+.maninboxpic
+{
+  position: absolute;
+  width: 1600px;
+  height: 664px;
+  margin-left: 190px;
+  margin-top: 800px;
+  z-index: 100;
+}
+
+.mancolumns
+{
+  float: right;
+  background: white;
+  position: relative;
+  margin-top: 540px;
+  background: none;
+  z-index: 1000;
+  left: 508px;
+}
+
+.mancolumnstext
+{
+  color: black;
+  line-height: 100px;
+  font-family: "Abraham Lincoln", Time New Roman;
+  text-align: left;
+  text-align: left;
+  margin-top: 402px;
+  margin-left: -440px;
+  z-index: 1000;
+}
+
+.mancolumnstwotext
+{
+  color: black;
+  line-height: 100px;
+  font-family: "Abraham Lincoln", Time New Roman;
+  text-align: left;
+  margin-left: -163px;
+  margin-top: -300px;
+}
+
+/* Winter Background */
+.winter
+{
+  width: 1920px;
+  height: 2589px;
+  margin-top: 1200px;
+  background-image: url(IMAGES/newest/snowback.png);
+}
+
+
+.global
+{
+  width: 32%;
+  margin-left: 330px;
+  text-align: left;
+  z-index: 10000;
+  margin-top: 300px;
+  position: absolute;
+  text-align: center;
+}
+
+.global b
+{
+  font-family: "Abraham Lincoln", Time New Roman;
+  color: black;
+  line-height: 36px;
+  font-size: 76px;
+}
+
+.global p
+{
+  color: black;
+  font-size: 27px;
+  letter-spacing: 3px;
+  font-family: "Abraham Lincoln", Time New Roman;
+  position: relative;
+  width: 885px;
+  top: 959px;
+  left: 142px;
+  line-height: 46px;
+  white-space: nowrap;
+}
+
+.blackline
+{
+  width: 72px;
+  z-index: 1000000;
+  height: 1px;
   background-color: black;
+  position: relative;
+  top: 1468px;
+  left: 250px;
+  transform: rotate(-90deg);
+
+}
+
+.customers
+{
+  margin-top: 1600px;
+  font-size: 16px;
+  color: black;
+  position: relative;
+  font-family: "Poppins", Time New Roman;
+  text-align: center;
+  left: -37px;
+  top: -47px;
+
+}
+
+.reviews
+{
+  margin-left: -66px;
+top: -13px;
+position: relative;
+width: 50%;
+}
+
+.leftman
+{
+  color: black;
+  font-size: 60px;
+}
+
+.leftman p
+{
+  width: 23em;
+  font-family: "Poppins", Time New Roman;
+  word-wrap: break-word;
+  font-size: 11px;
+  position: relative;
+  left: -362px;
+  top: -244px;
+}
+
+.leftman b
+{
+  font-family: "Georgia", Time New Roman;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 100;
+}
+
+.middleman
+{
+  color: black;
+  font-size: 60px;
+}
+
+.middleman p
+{
+  width: 24em;
+  color: rgb(255, 168, 0);
+  font-family: "Poppins", Time New Roman;
+  word-wrap: break-word;
+  font-size: 11px;
+  position: relative;
+  left: -35px;
+  top: -419px;
+}
+
+.middleman b
+{
+  font-family: "Georgia", Time New Roman;
+  color: white;
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 100;
+}
+
+.rightwoman
+{
+  color: black;
+  font-size: 60px;
+}
+
+.rightwoman p
+{
+  width: 21em;
+  font-family: "Poppins", Time New Roman;
+  word-wrap: break-word;
+  font-size: 11px;
+  position: relative;
+  left: 297px;
+  top: -585px;
+}
+
+.rightwoman b
+{
+  font-family: "Georgia", Time New Roman;
+  color: black;
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 100;
+}
+
+.blackbox
+{
+  width: 1920px;
+  height: 544px;
+  position: absolute;
+  top: 8111px;
+  background-color: black;
+}
+
+.brand2
+{
+ padding-top: 28px;
+ padding-bottom: 50px;
+}
+
+.brand2 h1
+{
+  color: white;
+  text-align: center;
+  align: auto;
+  font-style: normal;
+  width: 89px;
+  font-size: 26px;
+  font-family: "Gill Sans";
+  border: 1px solid;
+  border-width: 2;
+  padding: 7px;
+  letter-spacing: 2px;
+  font-weight: 620;
+}
+
+.footergroup
+{
+ margin-top: -81px;
+ position: relative;
+ left:-153px;
+}
+
+.number
+{
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  left: 365px;
+  top: 42px;
+  font-family: roboto;
+}
+
+.mail
+{
+  font-size: 15px;
+  position: absolute;
+  left: 1266px;
+  top: 44px;
+  font-family: "Roboto";
+}
+
+.mail p
+{
+  color: rgb(105, 79, 202);
+  letter-spacing: 2px;
+
+}
+
+.mail b
+{
+  color: white;
+  font-weight: 500;
+}
+
+.aboutus
+{
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 327px;
+  top: 144px;
+  font-family: "Roboto";
+}
+
+.aboutus p
+{
+  width: 25em;
+  text-align: left;
+  position: absolute;
+  color: grey;
+  font-size: 13px;
+  font-family: "Roboto";
+  left: 203px;
+  line-height: 2;
+}
+
+.newsletter h3
+{
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  left: 965px;
+  top: 144px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.newsletter p
+{
+  color: gray;
+  font-family: "Roboto";
+  font-size: 14px;
+  position: relative;
+  left: 106px;
+  top: -211px;
+  width: 15em;
+  text-align: left;
+}
+
+.newsletter h4
+{
+  font-size: 15px;
+  color: gray;
+  border: 10px solid gray;
+  border-width: 1px;
+  position: relative;
+  width: 214px;
+  height: 28px;
+  bottom: 165px;
+  left: 110px;
+  text-align: left;
+  -webkit-padding-before: 14px;
+  padding-left: 8px;
+  font-weight: 500;
+  font-family: "Roboto";
+}
+
+.subscribe
+{
+  position: relative;
+  font-size: 16px;
+  top: -121px;
+  border: 2px;
+  width: 143px;
+  height: 25px;
+  left: 76px;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+  padding: 5px;
+  padding-top: 14px;
+  font-family: "Roboto";
+  background-color: rgb(105, 79, 202);
+}
+
+.blog h5
+{
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  left: 776px;
+  top: -64px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.blog
+{
+ position: relative;
+ top: -331px;
+ left: 450px;
+ color: white;
+ font-family: "Roboto";
+ font-weight: 100;
+}
+
+.blog h6
+{
+  position: relative;
+  font-size: 25px;
+  top: 2px;
+  left: -62px;
+  font-size: 15px;
+  color: white;
+  font-family: "Roboto";
+  color: rgb(105, 79, 202);
+  font-weight: 100;
+}
+
+.blog2
+{
+ position: relative;
+ top: -306px;
+ left: 450px;
+ color: white;
+ font-family: "Roboto";
+ font-weight: 100;
+}
+
+.blog2 h5
+{
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  left: 776px;
+  top: -64px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+.blog2 h6
+{
+  position: relative;
+  font-size: 25px;
+  top: 2px;
+  left: -62px;
+  font-size: 15px;
+  color: white;
+  font-family: "Roboto";
+  color: rgb(105, 79, 202);
+  font-weight: 100;
+}
+
+
+.blog3 p
+{
+  color: white;
+  font-size: 15px;
+  position: relative;
+  left: 440px;
+  top: -276px;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+.blog3 h6
+{
+  position: relative;
+  top: -275px;
+  left: 384px;
+  font-size: 15px;
+  font-family: "Roboto";
+  color: rgb(105, 79, 202);
+  font-weight: 100;
+
 }
