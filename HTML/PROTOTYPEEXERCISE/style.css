@@ -19,13 +19,13 @@
 
 *
 {
-    margin: 0;
-    padding: 0;
+ margin: 0;
+ padding: 0;
 }
 
 .wrapper
 {
-  /* width:1920px; */
+width:1920px;
 }
 
 ul
@@ -113,10 +113,9 @@ nav
   font-weight: 200;
 }
 
-}
 .nav
 {
-  margin-top:21px;
+ margin-top:21px;
 }
 
 .nav a
@@ -132,7 +131,6 @@ nav
   color: white;
   top: 1325px;
   right: 356px;
-
 }
 
 .scroll
@@ -167,45 +165,45 @@ nav
 
 .sidesocial a
 {
-  color:white;
-  text-decoration: none;
-  font-family:"Abraham Lincoln", Time New Roman;
+ color:white;
+ text-decoration: none;
+ font-family:"Abraham Lincoln", Time New Roman;
 }
 
 .phoneimage
 {
-  position: absolute;
-  top: 0px;
-  right: -391px;
-  height: 280px;
-  width: 4em;
-  width: 4%;
+ position: absolute;
+ top: 0px;
+ right: -391px;
+ height: 280px;
+ width: 4em;
+ width: 4%;
 }
 
 .purple
 {
-  width: 1920px;
-  height: 1340px;
-  background-color:rgb(105, 79, 202);
+ width: 1920px;
+ height: 1340px;
+ background-color:rgb(105, 79, 202);
 }
 
 .paintbrushes
 {
-  width: 1413px;
-  height: 1000;
-  margin: -320px auto;
-  margin-left: 204px;
+ width: 1413px;
+ height: 1000;
+ margin: -320px auto;
+ margin-left: 204px;
 }
 
 
 .purplecolumn
 {
-  width: 32%;
-  margin: -132px;
-  display: inline-block;
-  font-family: "Abraham Lincoln", Time New Roman;
-  text-align: left;
-  color: white;
+ width: 32%;
+ margin: -132px;
+ display: inline-block;
+ font-family: "Abraham Lincoln", Time New Roman;
+ text-align: left;
+ color: white;
 }
 
 .invites
@@ -215,7 +213,6 @@ font-size:100px
 
 .headingthree
 {
-
  font-size: 30px;
 }
 
@@ -237,15 +234,15 @@ font-size:100px
 
 .purplemiddle
 {
-  width: 70%;
-  height: auto;
-  position: relative;
-  margin: 200px auto;
+ width: 70%;
+ height: auto;
+ position: relative;
+ margin: 200px auto;
 }
 
 .compparagraphcolumn
 {
-  margin-top:20px;
+ margin-top:20px;
 }
 
 .complexityparagraph
@@ -265,7 +262,6 @@ font-size:100px
   width: 158%;
   margin-top: 65px;
   margin-left: -172px;
-
 }
 
 .column
@@ -290,7 +286,7 @@ font-size:100px
 
 .miniparagraph
 {
-  line-height:2;
+ line-height:2;
 }
 
 .whiteline
@@ -357,18 +353,18 @@ font-size:100px
 
   .twocolumn
   {
-    width: 33%;
-    margin-left: -50px;
-    font-family: "Abraham Lincoln", Time New Roman;
-    text-align: right;
-    color: black;
-    margin-top: -515px;
+   width: 33%;
+   margin-left: -50px;
+   font-family: "Abraham Lincoln", Time New Roman;
+   text-align: right;
+   color: black;
+   margin-top: -515px;
   }
 
   .honoragain
   {
-    font-size: 98px;
-    margin-top: 37px;
+   font-size: 98px;
+   margin-top: 37px;
   }
 
 .globalservice
