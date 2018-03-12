@@ -561,6 +561,11 @@ width: 50%;
   font-weight: 100;
 }
 
+.leftman.newyork
+{
+  color:gray;
+}
+
 .middleman
 {
   color: black;
@@ -617,7 +622,7 @@ width: 50%;
 .blackbox
 {
   width: 1920px;
-  height: 544px;
+  height: 665px;
   position: absolute;
   top: 8111px;
   background-color: black;
@@ -633,13 +638,12 @@ width: 50%;
 {
   color: white;
   text-align: center;
-  align: auto;
   font-style: normal;
-  width: 89px;
-  font-size: 26px;
+  width: 25em;
+  width: 99px;
+  font-size: 29px;
   font-family: "Gill Sans";
   border: 1px solid;
-  border-width: 2;
   padding: 7px;
   letter-spacing: 2px;
   font-weight: 620;
@@ -687,12 +691,19 @@ width: 50%;
 .aboutus
 {
   color: white;
-  font-size: 16px;
   font-weight: 400;
   position: absolute;
   left: 327px;
   top: 144px;
   font-family: "Roboto";
+}
+
+.aboutus h3
+{
+  font-size: 18px;
+  font-weight: 500;
+
+
 }
 
 .aboutus p
@@ -762,6 +773,7 @@ width: 50%;
   text-align: center;
   padding: 5px;
   padding-top: 14px;
+  padding-bottom: 7px;
   font-family: "Roboto";
   background-color: rgb(105, 79, 202);
 }
@@ -772,7 +784,7 @@ width: 50%;
   font-size: 18px;
   position: absolute;
   left: 776px;
-  top: -64px;
+  top: -69px;
   font-family: "Roboto";
   font-weight: 500;
 }
