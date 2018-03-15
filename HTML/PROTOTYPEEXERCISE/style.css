@@ -215,22 +215,6 @@ font-size:100px
  font-size: 30px;
 }
 
-#complexity
-{
-  position: relative;
-  display: inline-block;
-  width: 30%;
-  text-align: left;
-  margin-left: -733px;
-  margin-top: -100px;
-  letter-spacing: 3px;
-  line-height: 70px;
-  font-size: 79px;
-  color: rgb(255, 255, 255);
-  font-family: "Abraham Lincoln";
-  font-weight: 100;
-}
-
 .purplemiddle
 {
  width: 70%;
@@ -256,12 +240,29 @@ font-size:100px
   margin-bottom: 4px;
 }
 
+.purplemiddle h1
+{
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  margin-left: -733px;
+  margin-top: -100px;
+  letter-spacing: 3px;
+  line-height: 70px;
+  font-size: 79px;
+  color: rgb(255, 255, 255);
+  font-family: "Abraham Lincoln";
+  font-weight: 100;
+}
+
 .column-wrapper
 {
   width: 158%;
   margin-top: 65px;
   margin-left: -172px;
 }
+
 
 .column
 {
@@ -273,7 +274,7 @@ font-size:100px
   color:white;
 }
 
-#workheading
+.column-wrapper h4
 {
  position: relative;
  font-size: 29px;
@@ -300,21 +301,21 @@ font-size:100px
 
 .bottomlines
 {
-  position:relative;
-  bottom:-20px;
+  position: relative;
+  bottom: -157px;
+  right: 1016px;
 }
 
 .graycity
 {
   width: 1920px;
-  height:897px;
   background-image: url('IMAGES/WE LOVE OUR CLIENTS/WeAreUnity.png');
   background-repeat: no-repeat;
   background-size: cover;
   background position: center;
   height: 1462px;
 }
-#ourclients
+.graycity h1
 {
   position: relative;
   letter-spacing: 3px;
@@ -337,7 +338,7 @@ font-size:100px
 {
   color: black;
   width: 227px;
-  margin-top: 56px;
+  margin-top: 45px;
   margin-left: -14px;
 }
 
@@ -481,7 +482,6 @@ height: 33px;
   background-image: url(IMAGES/newest/snowback.png);
 }
 
-
 .global
 {
   width: 32%;
@@ -541,93 +541,129 @@ height: 33px;
 
 .reviews
 {
-  margin-left: -66px;
+margin-left: -66px;
 top: -13px;
 position: relative;
 width: 50%;
 }
 
-.leftman
+.firstwhiteboxreview
 {
   color: black;
   font-size: 60px;
+  font-family: "Georgia";
 }
 
-.leftman p
+.firstwhiteboxreview p
 {
-  width: 23em;
-  font-family: "Poppins";
+  width: 19em;
   word-wrap: break-word;
-  font-size: 11px;
+  font-size: 13px;
   position: relative;
   left: -362px;
   top: -244px;
 }
 
-.leftman b
+.firstwhiteboxreview b
 {
-  font-family: "Georgia";
-  font-size: 14px;
-  line-height: 2;
   font-weight: 100;
+  line-height: 2;
 }
 
-.leftman.newyork
+.firstwhiteboxreview pre
 {
-  color:gray;
-}
-
-.middleman
-{
- color: black;
- font-size: 60px;
-}
-
-.middleman p
-{
-  width: 24em;
-  color: rgb(255, 168, 0);
-  font-family: "Poppins";
-  word-wrap: break-word;
-  font-size: 11px;
+  bottom: 212px;
   position: relative;
-  left: -35px;
-  top: -419px;
-}
-
-.middleman b
-{
-  font-family: "Georgia";
-  color: white;
+  font-family: "Poppins";
   font-size: 13px;
   line-height: 2;
   font-weight: 100;
+  left: -363px;
 }
 
-.rightwoman
+.firstwhiteboxreview span
 {
- color: black;
- font-size: 60px;
-}
-
-.rightwoman p
-{
-  width: 21em;
+  color: gray;
+  bottom: 253px;
+  position: relative;
   font-family: "Poppins";
+  font-size: 12px;
+  line-height: 2;
+  font-weight: 100;
+  left: -365px;
+}
+
+.oddbox-purplereview p
+{
+  width: 18em;
   word-wrap: break-word;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: 100;
+  position: relative;
+  left: -35px;
+  top: -436px;
+}
+
+.oddbox-purplereview pre
+{
+  bottom: 422px;
+  position: relative;
+  left: -35px;
+  font-family: "Poppins";
+  font-size: 13px;
+  color: rgb(255, 168, 0);
+}
+
+.oddbox-purplereview span
+{
+  bottom: 423px;
+  font-family: "Poppins";
+  left: -36px;
+  position: relative;
+  color: rgb(255, 168, 0);
   font-size: 11px;
+}
+
+.secondwhiteboxreview p
+{
+  width: 19em;
+  word-wrap: break-word;
+  font-size: 14px;
   position: relative;
   left: 297px;
   top: -585px;
 }
 
-.rightwoman b
+.secondwhiteboxreview b
 {
-  font-family: "Georgia";
+  font-weight: 100;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.secondwhiteboxreview pre
+{
+  font-family: "Poppins";
   color: black;
   font-size: 13px;
   line-height: 2;
   font-weight: 100;
+  left: 295px;
+  bottom: 545px;
+  position: relative;
+}
+
+.secondwhiteboxreview span
+{
+  color: gray;
+  bottom: 550px;
+  position: relative;
+  font-family: "Poppins";
+  font-size: 11px;
+  line-height: 2;
+  font-weight: 100;
+  left: 296px;
 }
 
 .blackbox
