@@ -138,8 +138,8 @@ nav
   color: white;
   position: relative;
   letter-spacing: 6px;
-  left: 889px;
-  top: -487px;
+  left: 893px;
+  top: -430px;
   font-size: 28px;
   font-family: "Abraham Lincoln";
 }
@@ -155,8 +155,8 @@ nav
 .sidesocial
 {
   position: relative;
-  top: -2000px;
-  right: -740px;
+  top: -2057px;
+  right: -747px;
   font-size: 20px;
   transform: rotate(-90deg);
 }
@@ -168,13 +168,19 @@ nav
  font-family:"Abraham Lincoln";
 }
 
-.phoneimage
+.phoneline
 {
   position: relative;
   top: -1900px;
-  right: -1637px;
-  height: 394px;
-  width: 4%;
+  right: -1681px;
+  height: 335px;
+}
+
+.phoneimage
+{
+  position: relative;
+  top: -1856px;
+  right: -1654px;
 }
 
 .purple
