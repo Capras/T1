@@ -1,0 +1,122 @@
+
+
+.veryfirstrow
+{
+margin-bottom:5%;
+color:white;
+}
+
+.headercolumn
+{
+  background-color:#363636;
+}
+
+li
+{
+  display:inline;
+}
+
+.social
+{
+  border:2px solid gray;
+}
+
+.midsection
+{
+ margin-top: 3%;
+}
+
+.four
+{
+ width: 33%;
+}
+
+
+.hospitalbutton
+{
+  height: 65px;
+  width: 60%;
+  margin-left: -11%;
+  text-align: left;
+  background-color: #ededed;
+  margin-left: 108%;
+}
+
+.bookingrow
+{
+  background-color: #f2f0f0;
+  width: 68%;
+  margin-left: 13%;
+}
+
+.arrivalbox
+{
+  width: 66%;
+}
+
+.going
+{
+  margin-left: -11%;
+}
+
+.dropdownheaders
+{
+  border:1px solid #e0e0e0;
+  background-color: white;
+  margin-top: 2px;
+}
+
+.littledropdowns
+{
+  margin-top: -1px;
+}
+
+.search
+{
+  padding-top: 2%;
+}
+
+.searchbook
+{
+ width: 46%;
+ font-size:14px;
+ height: 76%;
+}
+
+.travelsection
+{
+ margin-top: 10%;
+}
+
+.discover
+{
+  color: #DBCDB2;
+}
+
+.discoverbutton
+{
+  color: #DBCDB2;
+}
+
+.abouthotel
+{
+ margin-top: 5%;
+}
+
+.threecards
+{
+ margin: 0 auto;
+ float: none;
+ margin-bottom: 10px;
+ margin-top: 4%;
+ width: 74%;
+}
+
+.threemorecards
+{
+ margin: 0 auto;
+ float: none;
+ margin-bottom: 10px;
+ margin-top: 4%;
+ width: 100%;
+}
