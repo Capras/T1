@@ -356,15 +356,16 @@ ul
  font-family:Georgia;
  font-size: 1.3em;
  letter-spacing: .02em;
- font-style: bold;
+ margin-bottom: 2%;
+ font-style:italic;
 }
 
 .aboutusparagraphtwo
 {
- font-style: italic;
  font-weight: lighter;
  font-size: 1.3em;
  font-family: Georgia;
  color:#c8c8c8;
- font-weight: lighter;
+ margin-bottom: 11%;
+ font-style:italic;
 }
