@@ -34,12 +34,14 @@
      </div>
 
 <!-- Header Row Navbar -->
-<nav class="navbar navbar-expand-lg navbar-custom bg-#363636 mainnav">
+<nav class="navbar navbar-expand-lg mainnav">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"><i class="fa fa-bars fa-1x"></i>
+    </span>
   </button>
+
   <div class="collapse navbar-collapse">
-    <ul class="navbar-nav navwords">
+    <ul class="navbar-nav mr-auto navwords">
       <li class="nav-item active navlist">
         <a class="nav-link navbarwords" href="index.html">Home</a>
       </li>
@@ -54,7 +56,6 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle navbarwords" href="products.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products
         </a>
-
       </li>
         <li class="nav-item">
           <a class="nav-link navbarwords" href="gallery.html">Gallery</a>
@@ -91,31 +92,38 @@
 
 
 <!-- Booking Row -->
-  <div class="row four">
-   <div class="col-sm-5 hotel">
+ <div class="row four">
+     <div class="row hoteldots">
+     <span class="dot first"></span>&ensp;
+     <span class="dot second"></span>&ensp;
+     <span class="dot third"></span>&ensp;
+     <span class="dot fourth"></span>
+     </div>
+     <div class="col-sm-5 hotel">
       <div class="hotel"><button type="button" class="btn btn-hospital rounded-0 hotelbutton"><i class="demo-icon icon-hospital"></i>Hotel</button>
       </div>
-  </div>
+   </div>
 </div>
 
 <!-- Arrival -->
-<div class="row bookingrow">
-  <div class="col-md-3">Arrival
-    <div class="container">
-    <div class="row">
-        <div>
-            <div class="form-group">
-                <div class='input-group date arrivalbox'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <i class="icon-calendar"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+  <div class="row bookingrow">
+    <div class="col-md-3">Arrival
+      <div class="container">
+      <div class="row">
+          <div>
+              <div class="form-group">
+                  <div class='input-group date arrivalbox'>
+                      <input type='text' class="form-control" />
+                      <span class="input-group-addon">
+                          <i class="icon-calendar"></i>
+                      </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
  </div>
+
 <!-- Going -->
   <div class="col-md-2 going">Going
     <div class="container">
@@ -133,6 +141,7 @@
     </div>
   </div>
 </div>
+
   <!-- Room -->
   <div class="col-md-1 bookingheaders">Room
     <div class="btn-group dropdownheaders">
@@ -149,6 +158,7 @@
       </div>
     </div>
   </div>
+
   <!-- Person -->
   <div class="col-md-1 bookingheaders">Person
     <div class="btn-group dropdownheaders">
@@ -165,6 +175,7 @@
       </div>
     </div>
   </div>
+
   <!-- Child -->
   <div class="col-md-1 bookingheaders">Child
     <div class="btn-group dropdownheaders">
@@ -181,12 +192,13 @@
       </div>
     </div>
   </div>
+
   <!-- Day -->
   <div class="col-md-1 bookingheaders">Day
     <div class="btn-group dropdownheaders">
       <button type="button" class="btn btn-child rounded-0">1</button>
       <button type="button" class="btn btn-child dropdown-toggle dropdown-toggle-split::after rounded-0" style="background-color:#ededed;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
+      <span class="sr-only">Toggle Dropdown</span>
       </button>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Action</a>
@@ -197,55 +209,62 @@
       </div>
     </div>
   </div>
+
     <!-- Search -->
-  <div>
-    <button type="button" class="btn btn-secondary rounded-0 searchbook">SEARCH BOOK</button>
-  </div>
+    <div>
+      <button type="button" class="btn btn-secondary rounded-0 searchbook">SEARCH BOOK</button>
+    </div>
   </div>
 </div>
 
 <!-- Amazing Travel Section -->
 <section class="travelsection">
   <div class="row travel">
-    <div class="col-sm-3 amazingtravelcolumns"><img src="images/homepage/luggage.png" class="img-fluid">
-     <h6 class="travel">Amazing Travel</h6>
-     <p>Nam liber tempor cum soluta nobis</br>eleifend option congue nihil imperdiet</br>doming id quod mazim.</p>
+    <div class="col-sm-3 amazingtravelcolumns">
+       <img src="images/homepage/luggage.png" class="img-fluid">
+       <h6 class="travel">Amazing Travel</h6>
+       <p>Nam liber tempor cum soluta nobis</br>eleifend option congue nihil imperdiet</br>doming id quod mazim.</p>
        &ensp;
        <div class="dropright"><button type="button" class="btn dropdown-toggle rounded-0 amazingtravelreadmore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Read More</button>
-       </div>
+      </div>
    </div>
 
    <!-- Discover -->
-    <div class="col-sm-3 amazingtravelcolumns"><img src="images/homepage/map.png" class="img-fluid">
-      <h6 class="discover">Discover</h6>
-      <p>Nam liber tempor cum soluta nobis</br>eleifend option congue nihil imperdiet</br>doming id quod mazim.</p>
+    <div class="col-sm-3 amazingtravelcolumns">
+        <img src="images/homepage/map.png" class="img-fluid">
+        <h6 class="discover">Discover</h6>
+        <p>Nam liber tempor cum soluta nobis</br>eleifend option congue nihil imperdiet</br>doming id quod mazim.</p>
         &ensp;
         <div class="dropright"><button type="button" class="btn dropdown-toggle rounded-0 discoverbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Read More</button>
-        </div>
+       </div>
     </div>
+
     <!-- Book Your Trip -->
-    <div class="col-sm-3 amazingtravelcolumns"><img src="images/homepage/world.png" class="img-fluid">
-      <h6 class="amazingtraveltitles">Book Your Trip</h6>
-      <p>Nam liber tempor cum soluta nobis</br>eleifend option congue nihil imperdiet</br>doming id quod mazim.</p>
+    <div class="col-sm-3 amazingtravelcolumns">
+        <img src="images/homepage/world.png" class="img-fluid">
+        <h6 class="amazingtraveltitles">Book Your Trip</h6>
+        <p>Nam liber tempor cum soluta nobis</br>eleifend option congue nihil imperdiet</br>doming id quod mazim.</p>
         &ensp;
         <div class="dropright"><button type="button" class="btn dropdown-toggle rounded-0 amazingtravelreadmore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Read More</button>
         </div>
     </div>
+
     <!-- Nice Support -->
-    <div class="col-sm-3 amazingtravelcolumns"><img src="images/homepage/talkbubble.png" class="img-fluid">
-      <h6 class="amazingtraveltitles">Nice Support</h6>
-      <p>Nam liber tempor cum soluta nobis</br>eleifend option congue nihil imperdiet</br>doming id quod mazim.</p>
+    <div class="col-sm-3 amazingtravelcolumns">
+        <img src="images/homepage/talkbubble.png" class="img-fluid">
+        <h6 class="amazingtraveltitles">Nice Support</h6>
+        <p>Nam liber tempor cum soluta nobis</br>eleifend option congue nihil imperdiet</br>doming id quod mazim.</p>
         &ensp;
         <div class="dropright"><button type="button" class="btn dropdown-toggle rounded-0 amazingtravelreadmore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Read More</button>
         </div>
     </div>
   </div>
-
+</section>
 <!-- About Hotel -->
     <div class="row abouthotel text-center">
       <div class="col-lg-12">
         <h1>About Hotel</h1>
-        <p>One more time we're gonna celebrate! Oh yeah all right don't stop the dancing! One more time a celebration.</br>You know we're gonna do it right.Tonight, just feeling. Music's got me feeling the need. We're gonna celebrate.
+        <p>One more time we're gonna celebrate! Oh yeah all right don't stop the dancing! One more time a celebration.</br>You know we're gonna do it right. Tonight, just feeling. Music's got me feeling the need. We're gonna celebrate.
         </p>
      </div>
    </div>
@@ -334,7 +353,7 @@
 
 <!-- Bottom 1/3 of White Section - News & Announcements-->
 <section class="newssection">
-  <div class="row d-flex justify-content-between ewsannouncementsproducts">
+  <div class="row d-flex justify-content-between newsannouncementsproducts">
    <div class="col-md-7 news">
      <h3 class="text-left">News</h3>
      <div class="newsdots">
@@ -391,24 +410,25 @@
 <!-- Announcements -->
 <div class="col-md-5 announcements">
   <div class="row announcementrow">
-  <h3 class="text-success">Announcements</h3>
-  <div class="announcementdots">
-  <span class="dot dotone"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
- </div>
-  <h6 class="text-left">Lorem ipsum dolar sit amet,consectetur adipisicing elit, sed do eiusmod tempor.</h6>
-     <small class="text-left">Lorem ipsum dolar sit amet,consectetur adipisicing elit, sed</br>do eiusmod tempor incididunt ut labore et dolore magna</small>
-     <div class="dropright"><button type="button" class="btn dropdown-toggle rounded-0 announcementsreadmore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Read More</button>
-   </div>
+    <h3 class="text-success">Announcements</h3>
+    <div class="announcementdots">
+      <span class="dot dotone"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
+        <h6 class="text-left">Lorem ipsum dolar sit amet,consectetur adipisicing elit, sed do eiusmod tempor.</h6>
+         <small class="text-left">Lorem ipsum dolar sit amet,consectetur adipisicing elit, sed</br>do eiusmod tempor incididunt ut labore et dolore magna</small>
+           <div class="dropright"><button type="button" class="btn dropdown-toggle rounded-0 announcementsreadmore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Read More</button>
+          </div>
+  </div>
    <!-- Second Row Announcements -->
-   <div class="row announcementrow">
-     <h6 class="text-left">Lorem ipsum dolar sit amet,consectetur adipisicing elit, sed do eiusmod tempor.</h6><small>Lorem ipsum dolar sit amet,consectetur adipisicing elit, sed</br>do eiusmod tempor incididunt ut labore et dolore magna</small>
-      <div class="dropright"><button type="button" class="btn dropdown-toggle rounded-0 announcementsreadmore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Read More</button>
-      </div>
-    </div>
+      <div class="row announcementrow">
+         <h6 class="text-left">Lorem ipsum dolar sit amet,consectetur adipisicing elit, sed do eiusmod tempor.</h6><small>Lorem ipsum dolar sit amet,consectetur adipisicing elit, sed</br>do eiusmod tempor incididunt ut labore et dolore magna</small>
+           <div class="dropright"><button type="button" class="btn dropdown-toggle rounded-0 announcementsreadmore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Read More</button>
+           </div>
+     </div>
     <!-- Products Row -->
+
   <div>
     <div class="row announcementrow product">
       <h3 class="text-info">Products</h3>
@@ -452,44 +472,62 @@
 <div class="col-sm-3 contactus">
   <h3 class="contactusheader text-left">Contact Us</h3>
 
-<ul class="contactuscolumns">
-<li class="d-flex justify-content-between contactuscolumntwo">
-  <i class="demo-icon icon-location"></i>
-  <p class="text-left">Address:</p>
-  <a href="" class="text-left">1100 Pico Blvd</br>Santa Monica, CA 90405</br>United States</a>
- </li>
- &ensp;
+    <ul class="contactuscolumns">
+      <li class="d-flex justify-content-between contactuscolumntwo">
+        <i class="demo-icon icon-location"></i>
+        <p class="text-left">Address:</p>
+        <a href="" class="text-left">1100 Pico Blvd</br>Santa Monica, CA 90405</br>United States</a>
+       </li>
+       &ensp;
 
-  <li class="d-flex justify-content-between contactlist contactuscolumntwo">
-    <i class="icon-phone"></i>
-    <p class="text-left">Phone:</p>
-    <a href="" class="number" class="text-left">+4401233123208</a>
-  </li>
+      <li class="d-flex justify-content-between contactlist contactuscolumntwo">
+        <i class="icon-phone"></i>
+        <p class="text-left">Phone:</p>
+        <a href="" class="number" class="text-left">+4401233123208</a>
+      </li>
 
-  <li class="d-flex justify-content-between contactuscolumntwo">
-    <i class="icon-paper-plane-empty"></i>
-    <p class="emailone" class="text-left">Email:</p>
-    <a href="" class="email" class="text-left">support@nortsea.com</a>
-  </li>
+      <li class="d-flex justify-content-between contactuscolumntwo">
+        <i class="icon-paper-plane-empty"></i>
+        <p class="emailone" class="text-left">Email:</p>
+        <a href="" class="email" class="text-left">support@nortsea.com</a>
+      </li>
 
-  <li class="d-flex justify-content-between contactuscolumntwo">
-    <i class="icon-compass"></i>
-    <p class="gps" class="text-left">GPS:</p>
-    <a href="" class="gpstwo" class="text-left">12.021211-118.469009</a>
-  </li>
-</ul>
+      <li class="d-flex justify-content-between contactuscolumntwo">
+        <i class="icon-compass"></i>
+        <p class="gps" class="text-left">GPS:</p>
+        <a href="" class="gpstwo" class="text-left">12.021211-118.469009</a>
+      </li>
+   </ul>
 </div>
 
 <!-- Footer Column Four -->
-<div class="col-sm-3 footerlogo">
-  <div class="row logotwo">
-<img src="images/homepage/logo-footer.png" class="img-fluid">
-</div>
-</div>
+  <div class="col-sm-3 footerlogo">
+    <div class="row logotwo">
+     <img src="images/homepage/logo-footer.png" class="img-fluid">
+     </div>
+   </div>
 
-</div>
-</div>
+<!-- Bottom Footer -->
+   <div class="row text-left text-secondary bottomfooterrow">
+     <div class="col-md-8 copyright">
+        <div class="row vdivide">
+          <div class="col text-left"><small><h6>Copyright &copy; 2015 NORTSEA</small></h6>
+          </div>
+          <div class="col text-left"><small><h6>About NORTSEA</small></h6>
+          </div>
+          <div class="col text-left contactsupport"><small><h6>Contact Support</small></h6>
+          </div>
+        </div>
+    </div>
+
+       <div class="col-md-4 designedby">
+         <div class="row designed">
+         <small>Designed by Faith34</small>
+         </div>
+       </div>
+    </div>
 </footer>
+
 
 
 
