@@ -4,7 +4,9 @@
   padding-right:0;
   padding-left:0;
   margin-right:auto;
-  margin-left:auto
+  margin-left:auto;
+  background-color: #eaeaea;
+  overflow: hidden;
 }
 
 .veryfirstrow
@@ -37,6 +39,7 @@
 li
 {
   display:inline;
+  margin-left: 2%;
 }
 
 .logindropdown
@@ -68,10 +71,11 @@ li
 
 .mainnav
 {
- background-color: #363636;
- color:#95959d;
- margin-left: 24.6%;
- font-weight: 100;
+  background-color: #363636;
+  color: #95959d;
+  margin-left: 24.6%;
+  font-weight: 100;
+  width: 153.26%;
 }
 
 .navbar-nav
@@ -85,7 +89,7 @@ li
  color:#919191;
 }
 
-li.nav-item
+li.em
 {
   padding-right: 6%;
   white-space: nowrap;
@@ -94,8 +98,8 @@ li.nav-item
 
 .navwords
 {
-  width: 53%;
-  margin-left: 5%;
+  width: 100%;
+  margin-left: 0.8%;
 }
 .searchicon
 {
@@ -138,15 +142,15 @@ li.nav-item
 
 .four
 {
-  width: 33%;
-  /* margin-left: -5.12%; */
+  width: 30%;
+  margin-left: -.4%;
   margin-top: 2%;
 }
 
 .hoteldots
 {
   margin-top: 40%;
-  margin-left: -7%;
+  margin-left: -9%;
 }
 
 .dot
@@ -170,15 +174,15 @@ li.nav-item
 
 .hotel
 {
- margin-left: -4.5%;
+    margin-left: -21.9%;
 }
 
 .hotelbutton
 {
-  width: 63%;
+  width: 55%;
   background-color: #ededed;
   margin-top: 133%;
-  margin-left: -32%;
+  margin-left: 21.3%;
   padding-top: 11%;
   padding: 5%;
   padding-left: 24%;
@@ -242,6 +246,7 @@ li.nav-item
 .travelsection
 {
  margin-top: 5%;
+ background-color: #eaeaea;
 }
 
 .travel
@@ -264,6 +269,7 @@ li.nav-item
 .discoverbutton
 {
  color: #DBCDB2;
+ background-color: transparent;
 }
 
 .amazingtraveltitles
@@ -279,11 +285,13 @@ li.nav-item
 .amazingtravelreadmore
 {
   color:#919191;
+  background-color: transparent;
 }
 .abouthotel
 {
  margin-top: 5%;
  color: #DBCDB2;
+ background-color: #eaeaea;
 }
 
 .abouthotel h1
@@ -317,20 +325,30 @@ li.nav-item
 {
  border:12px solid black;
  color:#919191;
+ background-color: #eaeaea;
+ width:26rem;
+ align-items: center;
 }
+
 
 .threemorecards
 {
-margin: 0 auto;
-float: none;
-margin-bottom: 3%;
-margin-top: 2%;
-width: 100%;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 3%;
+  margin-top: 2%;
+  width: 101%;
+}
+
+.col-md-4
+{
+ left: -1%;
 }
 
 .readmorecards
 {
  color:#919191;
+ background-color:transparent;
 }
 
 .newssection
@@ -340,10 +358,11 @@ width: 100%;
 
 .news
 {
-  border: 1px solid gray;
-  max-width: 38%;
-  margin-left: 13%;
+  border: 1px solid #959595;
+  max-width: 41%;
+  margin-left: 15%;
   padding-top: 2%;
+  background-color: #ffffff;
 }
 
 .news h3
@@ -376,45 +395,16 @@ width: 100%;
   display: inline-block;
  }
 
-
-/* .diamond
-{
-  height: 15px;
-  width: 15px;
-  background-color: #9C0063;
-  transform: rotate(45deg);
-  margin-left: 65%;
-  margin-top: -3%;
-  display:inline-block;
-}
-/*
-.diamondone{
-    height: 100%;
-    width: 100%;
-}
-.diamondtwo{
-    height: 100%;
-    width:200px;
-    display:inline-block;
-    background-color: red;
-}
-.green{
-    height: 100%;
-    min-width:400px;
-    display:inline-block;
-    background-color:green;
-}
-.blue{
-    height: 100%;
-    width:400px;
-    display:inline-block;
-    background-color: blue;
-} */ */
-
 .newsmonths
 {
  margin-right: -15%;
  text-align: left;
+}
+
+.newsmonths p
+{
+  color: #919191;
+  font-weight: 100;
 }
 
 .datep
@@ -425,36 +415,51 @@ width: 100%;
 
 .newsreadmore
 {
- margin-top: -10%;
+ margin-top: -15%;
  margin-left: -3%;
+ background-color: transparent;
 }
 
 .viewallbutton
 {
  background-color:white;
  color:gray;
- width: 176%;
+ width: 150%;
  margin-bottom: 9%;
 }
 
 .announcements
 {
-  border: 1px solid gray;
   padding-top: 2%;
-  max-width: 34%;
-  margin-right: 13%;
+  max-width: 28%;
+  margin-right: 16%;
 }
 
 .announcementrow
 {
-  border-bottom: 1px solid gray;
+  border: 1px solid #959595;
   margin-left: 3%;
-  margin-top: 1%;
+  margin-top: -6%;
+  background-color: #ffffff;
+  padding-top: 9%;
+}
+
+.announcementrowtwo
+{
+  border: 1px solid #959595;
+  margin-left: 3%;
+  border-top: none;
+  background-color: #ffffff;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  margin-bottom: -16%;
 }
 
 .announcementrow h3
 {
 padding-bottom: 3%;
+margin-left: 5%;
+margin-top: -3%;
 }
 
 .announcementrowone h6
@@ -466,37 +471,65 @@ padding-bottom: 3%;
 
 .announcementdots
 {
-margin-top: -9%;
-margin-left: 89%;
+  margin-top: -9%;
+  margin-left: 85%;
 }
 
-small
+.announcementrow h6
 {
- width: 255%;
- text-align: left;
+  margin-left: 5%;
+  padding-right: 21%;
+}
+
+.announcementrowtwo h6
+{
+  margin-left: 5%;
+  padding-right: 21%;
+}
+
+p.text-left
+{
+  width: 93%;
+  margin-left: 5%;
+  color: #919191;
+  font-weight: 100;
+}
+
+.announcementrowtwo p
+{
+  color: #919191;
+  width: 92%;
+  margin-left: 5%;
+  font-weight: 100;
 }
 
 .announcementsreadmore
 {
   margin-top: 3%;
   color: #17a2b8;
+  background-color: transparent;
+  margin-left: 15%;
 }
 
 .announcementrow.product
 {
-  padding-top: 6%;
-  border: 2px solid gray;
-  margin-left: -3%;
+  padding-top: 12%;
+  margin-top: 21%;
+  border: 1px solid #959595;
+  margin-left: 3%;
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .product h3
 {
-  margin-left: 2%;
+  margin-left: 5%;
 }
 
 .product small
 {
-  margin-left:2%;
+  margin-left:5%;
+  margin-bottom: 7%;
 }
 
 footer
@@ -631,3 +664,163 @@ ul
 {
   padding-left: 34%;
 }
+
+
+/* ****MEDIA QUERIES**** */
+
+@media (max-width: 575px) {
+.logocolumn {
+display: show;
+}
+}
+
+@media (max-width: 775px) {
+.veryfirstrow {
+display: none;
+}
+}
+
+@media (max-width: 775px) {
+.mainnav {
+visibility: hidden;
+}
+}
+
+@media (max-width: 575px) {
+.headercolumn {
+visibility: hidden;
+}
+}
+
+@media (max-width: 775px) {
+.customerinfo {
+visibility: hidden;
+}
+}
+
+@media (max-width: 775px) {
+.navwords {
+display: none;
+}
+}
+
+@media (max-width: 400px) {
+.sunnycolumn {
+visibility: hidden;
+}
+}
+
+@media (max-width: 400px) {
+.hotelbutton {
+  position: relative;
+  width: 104%;
+  background-color: #ededed;
+  margin-top: 133%;
+  margin-left: 21.1%;
+  padding-top: 11%;
+  padding: 5%;
+  padding-left: 24%;
+  padding-bottom: 7%;
+}
+}
+
+@media (max-width:400px) {
+.hoteldots {
+  margin-top: -141%;
+  margin-left: 26%;
+  padding-bottom: 3%;
+  margin-bottom: -4%;
+}
+}
+
+@media (max-width: 400px) {
+.hotel
+{
+ margin-left: -4.5%;
+ margin-bottom: 364%;
+}
+}
+@media (max-width: 400px) {
+.bookingrow
+{
+background-color: #f2f0f0;
+margin-left: 12%;
+margin-bottom: 4%;
+color: black;
+max-width: 70%;
+padding-top: 3%;
+padding-bottom: 1%;
+padding-right: 5%;
+margin-top: -214%;
+}
+
+@media (max-width: 400px) {
+.going
+{
+ margin:0%;
+}
+}
+
+@media (max-width: 400px) {
+.four
+{
+width: 33%;
+margin-left: 5.3%;
+margin-top: 2%;
+}
+}
+
+
+@media (max-width: 400px) {
+.announcements
+{
+  visibility: hidden;
+}
+}
+
+@media (max-width: 400px) {
+.newsannouncementsproductd
+{
+  width:91%;
+}
+}
+
+@media  (max-width: 400px) {
+.newsdots
+{
+margin-top: -5%;
+margin-left: 89%;
+display: inline;
+}
+
+@media (max-width: 400px) {
+.news
+{
+border: 1px solid #959595;
+max-width: 84%;
+margin-left: 13%;
+padding-top: 2%;
+background-color: #ffffff;
+}
+}
+
+@media (max-width: 400px) {
+.viewallbutton
+{
+    background-color: white;
+    color: gray;
+    width: 92%;
+    margin-bottom: 9%;
+}
+}
+
+@media (max-width: 400px) {
+footer
+{
+background-color: #363636;
+color: #95959d;
+padding-top: 3%;
+margin-top: -251%;
+}
+
+everything up to # will do what I tell it above
