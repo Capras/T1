@@ -24,11 +24,11 @@
 
 .customerinfo
 {
- margin-right: 36%;
- margin-left: 5%;
- margin-top: 2%;
- color:#919191;
- font-size:13px;
+  margin-right: 23%;
+  margin-left: 5%;
+  margin-top: 2%;
+  color: rgb(145, 145, 145);
+  font-size: 13px;
 }
 
 .headercolumn
@@ -330,6 +330,10 @@ li.em
  align-items: center;
 }
 
+div.card-body.gym
+{
+  margin-left: -4%;
+}
 
 .threemorecards
 {
@@ -822,5 +826,3 @@ color: #95959d;
 padding-top: 3%;
 margin-top: -251%;
 }
-
-everything up to # will do what I tell it above
