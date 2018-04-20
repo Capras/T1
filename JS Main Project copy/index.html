@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="stylesfolder/bootstrap.css">
+    <link rel="stylesheet" href="stylesfolder/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+      <script src="jsfolder/boostrap.bundle.min.js" charset="utf-8"></script>
+      <script src="jsfolder/bootstrap.bundle.min.js" charset="utf-8"></script>
+      <script src="jsfolder/jQuery.js" charset="utf-8"></script>
+    <script src="jsfolder/library.js" charset="utf-8"></script>
+  </head>
+
+  <div class="container-fluid">
+
+
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">READ.ME LIBRARY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<!-- NAVBAR -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Get Recommendations
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Get Recommendation By Author</a>
+          <a class="dropdown-item" href="#">Get Recommendation By Book</a>
+
+      <li class="nav-item dropdown">
+        <div id="myDropdown" class="dropdown-content">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Add Books
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" class="searchdropdown">
+          <a class="dropdown-item" href="#">IT</a>
+          <a class="dropdown-item" href="#">The Art Of War</a>
+          <a class="dropdown-item" href="#">The Obstace Is The Way</a>
+          <a class="dropdown-item" href="#">Storm Of The Century</a>
+          <a class="dropdown-item" href="#">Prisoner Of Tehran</a>
+          <a class="dropdown-item" href="#">Catcher In The Rye</a>
+          <div class="dropdown-divider"></div>
+          <a onclick="buildTable();" class="dropdown-item" href="#">Add All Books &#43;</a>
+        </div>
+      </div>
+      </li>
+      <li class="nav-item dropdown">
+        <div id="myDropdown" class="dropdown-content">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Remove Books
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" class="searchdropdown">
+          <a class="dropdown-item" href="#">IT</a>
+          <a class="dropdown-item" href="#">The Art Of War</a>
+          <a class="dropdown-item" href="#">The Obstace Is The Way</a>
+          <a class="dropdown-item" href="#">Storm Of The Century</a>
+          <a class="dropdown-item" href="#">Prisoner Of Tehran</a>
+          <a class="dropdown-item" href="#">Catcher In The Rye</a>
+          <div class="dropdown-divider"></div>
+          <a onclick="buildTable();" class="dropdown-item" href="#">Remove All Books <b>&minus;</b></a>
+        </div>
+      </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Save Library</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+</nav>
+
+  <div class="container">
+
+
+    <div class="jumbotron">
+        <h1>BOOKS PUSHED HERE</h1>
+    </div>
+
+      <div class="row bookrow">
+        <div class="col-6 col-lg-4 books">
+           <img class="card-img-top" src="Images/itbook.jpg">
+          <p>IT</p>
+          <p><a class="btn btn-secondary" href="#" role="button">Add Book &#43;</a></p>
+        </div><!--/span-->
+        <div class="col-6 col-lg-4 books">
+          <img class="card-img-top" src="Images/aow.png">
+          <p>The Art Of War</p>
+          <p><a class="btn btn-secondary" href="#" role="button">Add Book &#43;</a></p>
+        </div><!--/span-->
+        <div class="col-6 col-lg-4 books">
+         <img class="card-img-top" src="Images/oitw.jpg">
+          <p>The Obstacle Is The Way</p>
+          <p><a class="btn btn-secondary" href="#" role="button">Add Book &#43;</a></p>
+        </div><!--/span-->
+        <div class="col-6 col-lg-4 books">
+           <img class="card-img-top" src="Images/sotc.jpg">
+          <p>Storm Of The Century</p>
+          <p><a class="btn btn-secondary" href="#" role="button">Add Book &#43;</a></p>
+        </div><!--/span-->
+        <div class="col-6 col-lg-4 books">
+           <img class="card-img-top" src="Images/pot.jpg">
+           <p>Prisoner Of Tehran</p>
+          <p><a class="btn btn-secondary" href="#" role="button">Add Book &#43;</a></p>
+        </div><!--/span-->
+        <div class="col-6 col-lg-4 books">
+          <img class="card-img-top" src="Images/citr.jpg">
+          <p>Catcher In The Rye</p>
+          <p><a class="btn btn-secondary" id="again" href="#">Add Book &#43;</a></p>
+        </div><!--/span-->
+      </div><!--/row-->
+    </div>
+
+    <!-- TEST BUTTON -->
+<button type="button" name"button" class="test">On Click Alert Me</button>
+
+<!-- TABLE -->
+
+    </div><!--/container-fluid-->
+
+
+    </body>
+  </html>
