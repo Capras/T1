@@ -20,17 +20,17 @@ window.Library = function(localStorageKey) {//constructor. Hoisting this up to t
   if (SarLibrary_instance) {
     return SarLibrary_instance;
   }
-  var SarLibrary_instance = this;//once the instance is created, assign it to the instance.
+  SarLibrary_instance = this;//once the instance is created, assign it to the instance.
 })();
 
-//Library Instance
-var SarLibrary = new Library("sara");
-//
+// //Library Instance
+// var SarLibrary = new Library("sara");
+// //
 
 Library.prototype.init = function(){
   this.$btn = $("button");
   this.$testBtn = $("button.test");
-  this.$againBtn = $("#again");
+  this.$addBookBtn = $("button.addbookbutton");
 
 
   this._bindEvents();
@@ -41,8 +41,7 @@ Library.prototype.init = function(){
 Library.prototype._bindEvents = function (){
   this.$btn.on("click", $.proxy(this._handleClick, this));
   this.$testBtn.on("click", $.proxy(this._handleTest, this));
-  this.$againBtn.on("click", $.proxy(this._handleAgain, this));
-
+  this.$addBookBtn.on("click", $.proxy(this._handleAddBook, this));
   return false;
 };
 
@@ -51,20 +50,10 @@ Library.prototype._handleTest = function(){
   return false;
 };
 
-Library.prototype._handleAgain = function(){
+Library.prototype._handleAddBook = function(){
   alert("Yep!");
   return false;
 };
-
-
-
-
-
-
-
-
-
-
 
 Library.prototype.addBook = function(book) {
   if(Array.isArray(book)) {
@@ -210,33 +199,8 @@ function decreaseValue() {
   }
 
 
-  $(document).ready(function(){
-    window.Library = new Library("sara")
-    window.SarLibrary.init();
-
-// Book Constructor
-var Book = function(bookparams) {
-  this.title = bookparams.title;
-  this.author = bookparams.author;
-  this.numPages = bookparams.numPages;
-  this.publishDate = new Date(bookparams.pubDate);
-};
 
 
-//Book Objects
-window.gIT = new Book({title: "IT", author: "Stephen King", numPages: 800,pubDate: "December 17, 1995 03:24:00"});
-window.gCatcherInTheRye = new Book({title: "Catcher In The Rye", author: "JD Salinger", numPages: 200,pubDate:"December 22, 1951, 03:24:00"});
-window.gPrisonerOfTehran = new Book({title: "Prisoner Of Tehran", author: "Marina Nemat", numPages: 400, pubDate:"January 20, 2007, 02:19:00"});
-window.gTheObstacleIsTheWay = new Book({title: "The Obstacle Is The Way", author: "Ryan Holiday", numPages: 240, pubDate: "January 21, 2014, 01:19:00"});
-window.gTheArtOfWar = new Book({title: "The Art Of War", author: "Sun Tzu", numPages: 245, pubDate:"5th Century B.C., 04:21:00"});
-window.gStormOfTheCentury = new Book({title: "Storm Of The Century", author: "Stephen King", numPages: 406, pubDate:"1999, 05:19:00"});
-SarLibrary.addBook(gIT)
-SarLibrary.addBook(gCatcherInTheRye)
-SarLibrary.addBook(gPrisonerOfTehran)
-SarLibrary.addBook(gTheArtOfWar)
-SarLibrary.addBook(gStormOfTheCentury)
-
-});
 //LOCAL STORAGE SECTION
 Library.prototype.setLibraryObject = function(localStorageKey){
   localStorage.setItem(localStorageKey, JSON.stringify(this._booksArray));
@@ -244,10 +208,21 @@ Library.prototype.setLibraryObject = function(localStorageKey){
 };
 
 Library.prototype.getLibraryObject = function(localStorageKey){
-return this._booksArray = JSON.parse(localStorage.getItem(localStorageKey));
+  return this._booksArray = JSON.parse(localStorage.getItem(localStorageKey));
 }
+
+Library.prototype.renderUpdate = function(){
+  $("body").trigger("renderUpdate");
+};
 
 // Testing Singleton//
 // var singleA = SarLibrary_instance.getInstance();
 // var singleB = SarLibrary_instance.getInstance();
 // console.log( singleA === singleB ); // true
+// Book Constructor
+var Book = function(bookparams) {
+  this.title = bookparams.title;
+  this.author = bookparams.author;
+  this.numPages = bookparams.numPages;
+  this.publishDate = new Date(bookparams.pubDate);
+};
