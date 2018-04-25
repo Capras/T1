@@ -10,159 +10,149 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css">
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
+      <!-- <script src="jsfolder/boostrap.bundle.min.js" charset="utf-8"></script> -->
+
+</head>
+
+  <div class="container-fluid">
+
+<!-- MODAL -->
+
+
+<!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">READ.ME LIBRARY</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+              <button type="button" class="btn btn-secondary getbookrec" data-container="body" data-toggle="hoverbutton" data-placement="right"data-content="Ready for a new book, but not sure what to choose? Click here, and we'll recommend one based on your search history and preferences.">
+             Get Book Recommendation
+             &#9432;
+            </button>
+          </li>
+
+
+            <li class="nav-item">
+              <button type="button" class="btn btn-secondary getbookrec savelibrary">
+             Save Library
+             </button>
+            </li>
+            <!-- REMOVE AUTHORS BUTTON -->
+
+            <li class="btn-group removeautbuttongroup">
+                <button type="button" class="btn btn-secondary dropdown-toggle removeautbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Remove Author(s)
+                </button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" class="searchdropdown">
+                  <a class="dropdown-item" href="#">JD Salinger</a>
+                  <a class="dropdown-item" href="#">Stephen King</a>
+                  <a class="dropdown-item" href="#">Marina Nemat</a>
+                  <a class="dropdown-item" href="#">Sun Tzu</a>
+                  <a class="dropdown-item" href="#">Ryan Holiday</a>
+                  <div class="dropdown-divider"></div>
+                  <a onclick="buildTable();" class="dropdown-item" href="#">Remove All Authors &#x2212;</a>
+                </div>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <div id="myDropdown" class="dropdown-content">
+                <a class="nav-link dropdown-toggle authbutton" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Remove Authors
+                </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" class="searchdropdown">
+                    <a class="dropdown-item" href="#">JD Salinger</a>
+                    <a class="dropdown-item" href="#">Stephen King</a>
+                    <a class="dropdown-item" href="#">Marina Nemat</a>
+                    <a class="dropdown-item" href="#">Sun Tzu</a>
+                    <a class="dropdown-item" href="#">Ryan Holiday</a>
+                    <div class="dropdown-divider"></div>
+                    <a onclick="buildTable();" class="dropdown-item" href="#">Remove All Authors &#x2212;</a>
+                  </div>
+                </div>
+              </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ////////////////////////// -->
+  <!-- <body>
+    <div id+"#jumbotron" class="row bookrow">
+      <div class="col-12">
+      <div class="jumbotron">
+        <h1>BOOKS PUSHED HERE</h1>
+      </div>
+    </div>
+  </div> -->
+
+        <!-- TABLE -->
+<div class="row bookrow mytable">
+  <div class="col-8">
+    <table id="table_id" class="table table-striped table-bordered" style="width:100%; height:100%">
+        <thead>
+            <tr>
+              <th>Image</th>
+              <th>Title</th>
+              <th>Author Name</th>
+              <th>Number Of Pages</th>
+              <th>Publication Date</th>
+              <th>Remove Book</th>
+            </tr>
+        </thead>
+            <tbody></tbody>
+    </table>
+
+    <!-- SIDE INPUT FORM -->
+    </div>
+      <div class="col-4">
+        <form class="inputform">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Title</label>
+            <input type="text" class="form-control formTitle" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Author</label>
+            <input type="text" class="form-control formAuthor" id="exampleInputPassword1" placeholder="Enter Author">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Number Of Pages</label>
+            <input type="text" class="form-control formPages" id="exampleInputPassword1" placeholder="Enter Number Of Pages">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Publication Date</label>
+            <input type="text" class="form-control formPubDate" id="exampleInputPassword1" placeholder="Enter Publication Date">
+          </div>
+            <button id="addbookbutton" type="button" class="btn btn-secondary">Add Book
+            </button>
+            <button id="addbooksbutton" type="button" class="btn btn-secondary">Add Multiple Books
+            </button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+    </div><!--/container-fluid-->
+
+    <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="jsfolder/bootstrap.bundle.min.js" charset="utf-8"></script>
     <!-- <script src="jsfolder/jQuery.js" charset="utf-8"></script>-->
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="jsfolder/dataTables.cellEdit.js"></script>
     <!-- <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script> -->
-  <script src="jsfolder/library.js" charset="utf-8"></script>
-  <script src="jsfolder/jspagetwo.js" charset="utf-8"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
-      <!-- <script src="jsfolder/boostrap.bundle.min.js" charset="utf-8"></script> -->
-
-  </head>
-
-  <div class="container-fluid">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">READ.ME LIBRARY</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-    <!-- NAVBAR -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Get Recommendations
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Get Recommendation By Author</a>
-              <a class="dropdown-item" href="#">Get Recommendation By Book</a>
-
-          <li class="nav-item dropdown">
-            <div id="myDropdown" class="dropdown-content">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Add Books
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <!-- <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" class="searchdropdown">
-              <a class="dropdown-item" href="#">IT</a>
-              <a class="dropdown-item" href="#">The Art Of War</a>
-              <a class="dropdown-item" href="#">The Obstace Is The Way</a>
-              <a class="dropdown-item" href="#">Storm Of The Century</a>
-              <a class="dropdown-item" href="#">Prisoner Of Tehran</a> -->
-              <a id="addRow" class="dropdown-item" href="#">Add A Book</a>
-              <div class="dropdown-divider"></div>
-              <a onclick="buildTable();" class="dropdown-item" href="#">Add All Books &#43;</a>
-            </div>
-          </div>
-          </li>
-          <li class="nav-item dropdown">
-            <div id="myDropdown" class="dropdown-content">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Remove Books
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" class="searchdropdown">
-              <a class="dropdown-item" href="#">IT</a>
-              <a class="dropdown-item" href="#">The Art Of War</a>
-              <a class="dropdown-item" href="#">The Obstace Is The Way</a>
-              <a class="dropdown-item" href="#">Storm Of The Century</a>
-              <a class="dropdown-item" href="#">Prisoner Of Tehran</a>
-              <a class="dropdown-item" href="#">Catcher In The Rye</a>
-              <div class="dropdown-divider"></div>
-              <a onclick="buildTable();" class="dropdown-item" href="#">Remove All Books <b>&minus;</b></a>
-            </div>
-          </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Save Library</a>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-    </nav>
-
-  <body>
-    <div class="row bookrow">
-      <div class="col-12">
-      <div class="jumbotron">
-        <h1>BOOKS PUSHED HERE</h1>
-      </div>
-    </div>
-  </div>
-
-
-
-  <table id="table_id" class="table table-striped table-bordered" style="width:100%; height:100%">
-    <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author Name</th>
-          <th>Number Of Pages</th>
-          <th>Publication Date</th>
-          <th>Add/Remove Book</th>
-        </tr>
-    </thead>
-    <tbody>
-      <!-- <tr>
-        <td>Tiger Nixon</td>
-        <td>System Architect</td>
-        <td>Edinburgh</td>
-        <td>61</td>
-        <td> <button type="button" name"button" class="test">x</button></td>
-      </tr>
-      <tr>
-        <td>Tiger Nixon</td>
-        <td>System Architect</td>
-        <td>Edinburgh</td>
-        <td>61</td>
-        <td> <button type="button" name"button" class="test">x</button></td>
-      </tr>
-      <tr>
-        <td>Garrett Winters</td>
-        <td>Accountant</td>
-        <td>Tokyo</td>
-        <td>63</td>
-        <td> <button type="button" name"button" class="test">x</button></td>
-      </tr>
-      <tr>
-        <td>Ashton Cox</td>
-        <td>Junior Technical Author</td>
-        <td>San Francisco</td>
-        <td>66</td>
-        <td> <button type="button" name"button" class="test">x</button></td>
-      </tr>
-      <tr>
-        <td>Cedric Kelly</td>
-        <td>Senior Javascript Developer</td>
-        <td>Edinburgh</td>
-        <td>22</td>
-        <td> <button type="button" name"button" class="test">x</button></td>
-      </tr>
-      <tr>
-        <td>Airi Satou</td>
-        <td>Accountant</td>
-        <td>Tokyo</td>
-        <td>33</td>
-        <td> <button type="button" name"button" class="test">x</button></td>
-      </tr> -->
-      </tbody>
-    </table>
-
-
-  </div>
-    </div>
-
-</div>
-
-<!-- TABLE -->
-
-    </div><!--/container-fluid-->
+    <script src="jsfolder/library.js" charset="utf-8"></script>
+    <script src="jsfolder/jspagetwo.js" charset="utf-8"></script>
     </body>
-  </html>
+</html>

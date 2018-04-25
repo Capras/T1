@@ -1,12 +1,3 @@
-// Library Constructor - global access to constructor
-//
-// var Library = function(localStorageKey){
-//  //--array - everything below is injected into this array. Every method written acts on this array. Methods are light blue or yellow(created by us/kyle) e.g. "push, splice, and those we create like "addBook below.
-// this.localStorageKey = localStorageKey;
-// };
-
-//Library = variable, this._booksArray - property
-
 
 
 //New Library Instance
@@ -23,37 +14,15 @@ window.Library = function(localStorageKey) {//constructor. Hoisting this up to t
   SarLibrary_instance = this;//once the instance is created, assign it to the instance.
 })();
 
-// //Library Instance
-// var SarLibrary = new Library("sara");
-// //
-
-Library.prototype.init = function(){
-  this.$btn = $("button");
-  this.$testBtn = $("button.test");
-  this.$addBookBtn = $("button.addbookbutton");
+//Library Instance
+var SarLibrary = new Library("sara");
+//
 
 
-  this._bindEvents();
-  return false;
-};
-
-
-Library.prototype._bindEvents = function (){
-  this.$btn.on("click", $.proxy(this._handleClick, this));
-  this.$testBtn.on("click", $.proxy(this._handleTest, this));
-  this.$addBookBtn.on("click", $.proxy(this._handleAddBook, this));
-  return false;
-};
-
-Library.prototype._handleTest = function(){
-  alert("fired");
-  return false;
-};
-
-Library.prototype._handleAddBook = function(){
-  alert("Yep!");
-  return false;
-};
+// Library.prototype._handleAddBook = function(){
+//   alert("Yep!");
+//   return false;
+// };
 
 Library.prototype.addBook = function(book) {
   if(Array.isArray(book)) {
@@ -62,14 +31,15 @@ Library.prototype.addBook = function(book) {
   }
 
   for (var i = 0; i < this._booksArray.length; i++) {
-    var bookPicked = this._booksArray[i]
+    var bookPicked = this._booksArray[i];
       if(bookPicked.title == book.title) {
         return false;
       }
   }
-  this._booksArray.push(book)
+  this._booksArray.push(book);
+  localStorage.setItem("sara", JSON.stringify(this._booksArray));
   return true;
-}
+};
 
 
 // If IT or Catcher are removed, true. Otherwise, false.
@@ -78,7 +48,7 @@ Library.prototype.removeBookByTitle = function(title) {
    var removedTitle = this._booksArray[i];
 
    if(removedTitle.title == title) {
-     this._booksArray.splice(i,1)
+     this._booksArray.splice(i,1);
       return true;
    }
   }
@@ -105,7 +75,7 @@ Library.prototype.removeBooksByAuthor = function(author) {
 
 Library.prototype.getRandomBook = function() {
   return this._booksArray[Math.floor(Math.random()*this._booksArray.length)];
-}
+};
 
 Library.prototype.getBookByTitle = function(title) {
   var testArray = [];
@@ -157,11 +127,11 @@ Library.prototype.getAuthors = function() {
 
 Library.prototype.getRandomAuthorName = function() {
   return this.getRandomBook().author;
-}
+};
 
 Library.prototype.removeAllBooks = function() {
     var myArray = this._booksArray = [];
-}
+};
 
 // **Practice**
 //   Library.prototype.removeAllBooks = function() {
@@ -196,7 +166,7 @@ function decreaseValue() {
       this.getBookByTitle(bookStringBeingPassed);
         arrayToPushBooksTo.push(this.getBookByTitle(bookStringBeingPassed));
           return arrayToPushBooksTo;
-  }
+  };
 
 
 
@@ -209,11 +179,11 @@ Library.prototype.setLibraryObject = function(localStorageKey){
 
 Library.prototype.getLibraryObject = function(localStorageKey){
   return this._booksArray = JSON.parse(localStorage.getItem(localStorageKey));
-}
-
-Library.prototype.renderUpdate = function(){
-  $("body").trigger("renderUpdate");
 };
+
+// Library.prototype.renderUpdate = function(){
+//   $("body").trigger("renderUpdate");
+// };
 
 // Testing Singleton//
 // var singleA = SarLibrary_instance.getInstance();
@@ -221,8 +191,10 @@ Library.prototype.renderUpdate = function(){
 // console.log( singleA === singleB ); // true
 // Book Constructor
 var Book = function(bookparams) {
+  this.image = bookparams.image;
   this.title = bookparams.title;
   this.author = bookparams.author;
   this.numPages = bookparams.numPages;
   this.publishDate = new Date(bookparams.pubDate);
+  this.removeButtonImg = bookparams.removeButtonImg;
 };

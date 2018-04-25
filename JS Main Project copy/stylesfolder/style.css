@@ -1,19 +1,55 @@
-/* .books {
-  margin-left: 1%;
-} */
 
-/* .bookrow{
-  margin-left:10%;
-} */
 
 .searchdropdown {
   margin-left: 9%;
+  width: 79%;
 }
 
 .card-img-top {
   width: 62%;
   height: 64%;
 }
+
+.inputform{
+  width: 85%;
+  margin-left: 6%;
+}
+.mytable{
+  border-color: black;
+  margin-left: 2%;
+}
+
+.cover {
+  width: 100%;
+}
+
+.removeicon {
+  width: 40%;
+  margin-left: 25%;
+}
+
+.getbookrec {
+  background-color: transparent;
+  color: #808080;
+}
+
+.savelibrary {
+  margin-left: 10%;
+}
+
+.removeautbuttongroup {
+  margin-left: 5%;
+  background-color: transparent;
+  color: #808080;
+}
+
+
+.removeautbutton {
+  background-color: transparent;
+  color: #808080;
+}
+
+
 /* ---------- */
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
