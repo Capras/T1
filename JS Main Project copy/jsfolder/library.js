@@ -49,7 +49,8 @@ Library.prototype.removeBookByTitle = function(title) {
 
    if(removedTitle.title == title) {
      this._booksArray.splice(i,1);
-      return true;
+     localStorage.setItem("sara", JSON.stringify(this._booksArray));
+     return true;
    }
   }
   return false;

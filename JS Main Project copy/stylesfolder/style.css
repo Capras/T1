@@ -1,13 +1,19 @@
 
+.readme {
+  font-size: 2em;
+}
 
 .searchdropdown {
   margin-left: 9%;
   width: 79%;
 }
 
-.card-img-top {
-  width: 62%;
-  height: 64%;
+ .headerimagerow {
+  background-color: black;
+ }
+.headerimage{
+  margin-left: 9%;
+  width: 82%;
 }
 
 .inputform{
@@ -17,6 +23,7 @@
 .mytable{
   border-color: black;
   margin-left: 2%;
+  margin-top: 3%;
 }
 
 .cover {
@@ -30,32 +37,55 @@
 
 .getbookrec {
   background-color: transparent;
-  color: #808080;
+  color: black;
 }
 
 .savelibrary {
   margin-left: 10%;
+  color: black;
 }
 
 .removeautbuttongroup {
   margin-left: 5%;
   background-color: transparent;
-  color: #808080;
 }
 
 
 .removeautbutton {
   background-color: transparent;
-  color: #808080;
+  color: black;
 }
 
+#addbookbutton {
+  background-color: transparent;
+  color: black;
+}
 
-/* ---------- */
-/**
- * @author zhixin wen <wenzhixin2010@gmail.com>
- * version: 1.12.1
- * https://github.com/wenzhixin/bootstrap-table/
- */
+#addbooksbutton {
+  background-color: transparent;
+  color: black;
+}
+
+#modalimage {
+  width: 205px;
+  height: 236px;
+}
+
+.modaladdbookbutton {
+  background-color: transparent;
+  color: black;
+}
+
+.modalclosebutton {
+  background-color: transparent;
+  color: black;
+}
+
+/* #upload{
+   display:none
+} */
+
+/* BOOTSTRAP TABLE */
 
 .bootstrap-table .table {
     margin-bottom: 0 !important;
