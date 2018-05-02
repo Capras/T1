@@ -34,7 +34,7 @@
         <p id="modalremovebutton" src="..."></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary modaladdbookbutton">Add Book</button>
+        <button id="modaladdbookbutton" type="button" class="btn btn-secondary">Add Book</button>
         <button type="button" class="btn btn-secondary modalclosebutton" data-dismiss="modal">Close</button>
       </div>
     </div>
@@ -62,11 +62,12 @@
 
 
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <button id="savebutton" type="button" class="btn btn-secondary getbookrec savelibrary">
              Save Library
              </button>
-            </li>
+            </li> -->
+
             <!-- REMOVE AUTHORS BUTTON -->
 
             <li class="btn-group removeautbuttongroup">
@@ -93,7 +94,7 @@
         <img src="Images/headerimage.jpg" class="headerimage">
     </div>
 
-    <!-- ////////////////////////// -->
+    <!-- REMOVE AUTHORS BUTTON ////////////////////////// -->
 
 
         <!-- TABLE -->
@@ -117,8 +118,9 @@
     </div>
       <div class="col-4">
         <form class="inputform">
+          <div id="output">You have 0 books in your library</div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Title</label>
+            <label for="exampleInputEmail1"><b>Title<b></label>
             <input type="text" class="form-control formTitle" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title">
           </div>
           <div class="form-group">
@@ -130,22 +132,22 @@
             <input type="text" class="form-control formPages" id="exampleInputPassword1" placeholder="Enter Number Of Pages">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Publication Date</label>
-            <input type="text" class="form-control formPubDate" id="exampleInputPassword1" placeholder="Enter Publication Date">
+            <label for="datePicker">Publication Date</label>
+            <input type="date" id="datepicker" class="formPubDate">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Upload File</label>
-            <input type="text" class="form-control formTitle" id="uploadimage" type="url" aria-describedby="uploadImage" placeholder="Upload File">
+            <input type="text" class="form-control formTitle" id="uploadimage" type="file" aria-describedby="uploadImage" placeholder="Upload File">
           </div>
 
             <button id="addbookbutton" type="button" class="btn btn-secondary">Add Book
             </button>
-            <button id="addbooksbutton" type="button" class="btn btn-secondary">Add Multiple Books
+            <button id="addbooksbutton" type="button" class="btn btn-secondary">Add All Books
             </button>
         </form>
       </div>
     </div>
-
+<!-- END OF INPUT FORM //////////////////////////// -->
 
 
 
@@ -160,6 +162,7 @@
     <!-- <script src="jsfolder/jQuery.js" charset="utf-8"></script>-->
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="jsfolder/dataTables.cellEdit.js"></script>
+
     <!-- <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script> -->
     <script src="jsfolder/library.js" charset="utf-8"></script>
     <script src="jsfolder/jspagetwo.js" charset="utf-8"></script>

@@ -4,25 +4,19 @@
 (function(){
 var SarLibrary_instance; //defining somewhere for our instance to go on the window. It's a placeholder because the instance has to be set to something and this allows me to do that. Assigning the instance to a variable.
 
-window.Library = function(localStorageKey) {//constructor. Hoisting this up to the window.
+window.Library = function() { //constructor. Hoisting this up to the window.
   this._booksArray = [];
-  this.localStorageKey = localStorageKey;
 };
   if (SarLibrary_instance) {
     return SarLibrary_instance;
   }
-  SarLibrary_instance = this;//once the instance is created, assign it to the instance.
+  SarLibrary_instance = this; //once the instance is created, assign it to the instance.
 })();
 
 //Library Instance
 var SarLibrary = new Library("sara");
 //
 
-
-// Library.prototype._handleAddBook = function(){
-//   alert("Yep!");
-//   return false;
-// };
 
 Library.prototype.addBook = function(book) {
   if(Array.isArray(book)) {
@@ -37,19 +31,20 @@ Library.prototype.addBook = function(book) {
       }
   }
   this._booksArray.push(book);
-  localStorage.setItem("sara", JSON.stringify(this._booksArray));
+  this.setLibraryObject("sara");
+  // this.renderUpdate();
   return true;
 };
 
 
-// If IT or Catcher are removed, true. Otherwise, false.
+// If books are removed, true. Otherwise, false.
 Library.prototype.removeBookByTitle = function(title) {
  for (var i = 0; i < this._booksArray.length; i++) {
    var removedTitle = this._booksArray[i];
 
    if(removedTitle.title == title) {
      this._booksArray.splice(i,1);
-     localStorage.setItem("sara", JSON.stringify(this._booksArray));
+     this.setLibraryObject("sara");
      return true;
    }
   }
@@ -67,7 +62,6 @@ Library.prototype.removeBooksByAuthor = function(author) {
   for (var i = this._booksArray.length - 1; i >= 0; i--) {
     if(this._booksArray[i].author === author) {
       this._booksArray.splice(i, 1);
-      // console.log("yes remove the book")
        outcome = true;
     }
   }
@@ -161,15 +155,13 @@ function decreaseValue() {
 
 //Work on this
   Library.prototype.filterForProperties = function(bookStringBeingPassed) {
-      var arrayToPushBooksTo = [];
-      this.getBooksByAuthor(bookStringBeingPassed);
-      arrayToPushBooksTo.push(this.getBooksByAuthor(bookStringBeingPassed));
-      this.getBookByTitle(bookStringBeingPassed);
-        arrayToPushBooksTo.push(this.getBookByTitle(bookStringBeingPassed));
-          return arrayToPushBooksTo;
+    var arrayToPushBooksTo = [];
+    this.getBooksByAuthor(bookStringBeingPassed);
+    arrayToPushBooksTo.push(this.getBooksByAuthor(bookStringBeingPassed));
+    this.getBookByTitle(bookStringBeingPassed);
+      arrayToPushBooksTo.push(this.getBookByTitle(bookStringBeingPassed));
+        return arrayToPushBooksTo;
   };
-
-
 
 
 //LOCAL STORAGE SECTION
@@ -179,10 +171,26 @@ Library.prototype.setLibraryObject = function(localStorageKey){
 };
 
 Library.prototype.getLibraryObject = function(localStorageKey){
-  return this._booksArray = JSON.parse(localStorage.getItem(localStorageKey));
+ var getLocalStorageBooks = localStorage.getItem(localStorageKey);
+ // if (getLocalStorageBooks !== null){
+ //   var parseBooks = JSON.parse(getLocalStorageBooks);
+ //   for (var i = 0; i < parseBooks.length; i++) {
+ //     this.addBook(new Book(parseBooks[i]));
+ //    }
+ //  }
 };
+// Library.prototype.getLibraryObject = function(localStorageKey){
+//   var getLocalStorageBooks = JSON.parse(localStorage.getItem(localStorageKey));
+//     if (getLocalStorageBooks) {
+//       for (var i = 0; i < getLocalStorageBooks[i].length; i++); {
+//       var book = getLocalStorageBooks[i];
+//       this.addBook(new Book(book));
+//       }
+//   return true;
+//     }
+// };
 
-// Library.prototype.renderUpdate = function(){
+// Library.prototype.renderUpdate = function() {
 //   $("body").trigger("renderUpdate");
 // };
 
@@ -190,6 +198,8 @@ Library.prototype.getLibraryObject = function(localStorageKey){
 // var singleA = SarLibrary_instance.getInstance();
 // var singleB = SarLibrary_instance.getInstance();
 // console.log( singleA === singleB ); // true
+
+
 // Book Constructor
 var Book = function(bookparams) {
   this.image = bookparams.image;
@@ -199,3 +209,22 @@ var Book = function(bookparams) {
   this.publishDate = new Date(bookparams.pubDate);
   this.removeButtonImg = bookparams.removeButtonImg;
 };
+
+//Book Objects
+var gPsychCyb = new Book({image:"Images/PC.jpg",title: "Psycho-Cybernetics", author: "Maxwell Maltz", numPages: 310,pubDate: "November 17, 1960", removeButtonImg:"Images/removeicon.png"});
+var gIT = new Book({image:"Images/itbook.jpg",title: "IT", author: "Stephen King", numPages: 800,pubDate: "December 17, 1995 03:24:00", removeButtonImg:"Images/removeicon.png"});
+var gCatcherInTheRye = new Book({image:"Images/citr.jpg", title: "Catcher In The Rye", author: "JD Salinger", numPages: 200,pubDate:"December 22, 1951", removeButtonImg:"Images/removeicon.png"});
+var gPrisonerOfTehran = new Book({image:"Images/pot.jpg", title: "Prisoner Of Tehran", author: "Marina Nemat", numPages: 400, pubDate:"January 20, 2007", removeButtonImg:"Images/removeicon.png"});
+var gTheObstacleIsTheWay = new Book({image:"Images/oitw.jpg", title: "The Obstacle Is The Way", author: "Ryan Holiday", numPages: 240, pubDate: "January 21, 2014", removeButtonImg:"Images/removeicon.png"});
+var gTheArtOfWar = new Book({image:"Images/aow.jpg", title: "The Art Of War", author: "Sun Tzu", numPages: 245, pubDate:"March 30, 1", removeButtonImg:"Images/removeicon.png"});
+var gStormOfTheCentury = new Book({image:"Images/sotc.jpg",title: "Storm Of The Century", author: "Stephen King", numPages: 406, pubDate:"April 2, 1999,", removeButtonImg:"Images/removeicon.png"});
+  // SarLibrary.addBook(gTheArtOfWar);
+  // SarLibrary.addBook(gTheObstacleIsTheWay);
+  // SarLibrary.addBook(gPsychCyb);
+  // SarLibrary.addBook(gIT);
+  // SarLibrary.addBook(gCatcherInTheRye);
+  // SarLibrary.addBook(gPrisonerOfTehran);
+  // SarLibrary.addBook(gStormOfTheCentury);
+
+
+var allBooksInArray = ([gPsychCyb, gIT, gCatcherInTheRye, gPrisonerOfTehran, gTheObstacleIsTheWay, gTheArtOfWar, gStormOfTheCentury]);
