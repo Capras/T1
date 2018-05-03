@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
-      <!-- <script src="jsfolder/boostrap.bundle.min.js" charset="utf-8"></script> -->
+
 
 </head>
     <div class="container-fluid">
@@ -27,11 +25,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <img id="modalimage" src="...">
+        <img id="modalimage">
         <p id="modalauthor">Author:</p>
         <p id="modalpagenumbers">Number Of Pages:</p>
         <p id="modalpublicationdate">Publication Date:</p>
-        <p id="modalremovebutton" src="..."></p>
+        <p id="modalremovebutton"></p>
       </div>
       <div class="modal-footer">
         <button id="modaladdbookbutton" type="button" class="btn btn-secondary">Add Book</button>
@@ -41,60 +39,63 @@
   </div>
 </div>
 
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="getauthors" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Authors</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="getauthorsmodalbody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- NAV BAR -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand readme" href="#">READ.ME LIBRARY</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand readme" href="#">READ.ME LIBRARY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
 
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-              <button id="getbookrec" type="button" class="btn btn-secondary getbookrec" data-container="body" data-toggle="modal" data-target="#modal" data-placement="right"data-content="Ready for a new book? Click here. We'll recommend one based on your search history and preferences.">
-             Get Book Recommendation
-             &#9432;
-             </button>
-          </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+            <button id="getbookrec" type="button" class="btn btn-secondary getbookrec" data-container="body" data-toggle="modal" data-target="#modal" data-placement="right"data-content="Ready for a new book? Click here. We'll recommend one based on your search history and preferences.">
+           Get Book Recommendation
+           &#9432;
+           </button>
+        </li>
 
-
-
-
-            <!-- <li class="nav-item">
-              <button id="savebutton" type="button" class="btn btn-secondary getbookrec savelibrary">
-             Save Library
-             </button>
-            </li> -->
-
-            <!-- REMOVE AUTHORS BUTTON -->
-
-            <li class="btn-group removeautbuttongroup">
-                <button type="button" class="btn btn-secondary dropdown-toggle removeautbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Remove Author(s)
-                </button>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" class="searchdropdown">
-                  <a class="dropdown-item" href="#">JD Salinger</a>
-                  <a class="dropdown-item" href="#">Stephen King</a>
-                  <a class="dropdown-item" href="#">Marina Nemat</a>
-                  <a class="dropdown-item" href="#">Sun Tzu</a>
-                  <a class="dropdown-item" href="#">Ryan Holiday</a>
-                  <div class="dropdown-divider"></div>
-                  <a onclick="buildTable();" class="dropdown-item" href="#">Remove All Authors &#x2212;</a>
-                </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        </li> -->
+            <!-- END OF REMOVE AUTHORS BUTTON ////////////////////////// -->
+        <li class="nav-item dropdown">
+          <button id="getauthorsbutton" type="button" class="btn btn-secondary"  data-toggle="modal" data-target="#getauthors">
+            View Authors
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
     <div class="row headerimagerow">
         <img src="Images/headerimage.jpg" class="headerimage">
     </div>
 
-    <!-- REMOVE AUTHORS BUTTON ////////////////////////// -->
+
 
 
         <!-- TABLE -->
@@ -157,14 +158,9 @@
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="jsfolder/bootstrap.bundle.min.js" charset="utf-8"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
-    </script> -->
-    <!-- <script src="jsfolder/jQuery.js" charset="utf-8"></script>-->
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="jsfolder/dataTables.cellEdit.js"></script>
-
-    <!-- <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script> -->
     <script src="jsfolder/library.js" charset="utf-8"></script>
-    <script src="jsfolder/jspagetwo.js" charset="utf-8"></script>
+    <script src="jsfolder/docready.js" charset="utf-8"></script>
     </body>
 </html>

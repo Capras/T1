@@ -11,16 +11,16 @@
  .headerimagerow {
   background-color: black;
  }
-.headerimage{
+.headerimage {
   margin-left: 9%;
   width: 82%;
 }
 
-.inputform{
+.inputform {
   width: 85%;
   margin-left: 6%;
 }
-.mytable{
+.mytable {
   border-color: black;
   margin-left: 2%;
   margin-top: 3%;
@@ -38,6 +38,7 @@
 .getbookrec {
   background-color: transparent;
   color: black;
+  border-color:black;
 }
 
 .savelibrary {
@@ -50,8 +51,26 @@
   background-color: transparent;
 }
 
-
 .removeautbutton {
+  margin-left: 5%;
+  background-color: transparent;
+  color: black;
+}
+
+.addallbooksbutton {
+  background-color: transparent;
+  color: black;
+  margin-left: 5%;
+}
+
+#getauthorsbutton {
+  background-color: transparent;
+  color: black;
+  border-color: black;
+  margin-left: 20%;
+}
+
+#addallbooks {
   background-color: transparent;
   color: black;
 }
