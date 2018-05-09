@@ -1,0 +1,39 @@
+.container-fluid {
+    width: 105%;
+    margin-left: -2%;
+}
+#listid {
+    list-style-type: none;
+  }
+
+#formid {
+    margin-left: -20%;
+}
+
+.button {
+    margin-top: 4%;
+    color:	#e51937;
+}
+
+img.img-rounded {
+    width:40%;
+    margin-bottom: 8%;
+}
+
+body > div > ul.nav.justify-content-left > li {
+    width: 31%;
+    margin-left: 2%;
+}
+
+.searchbutton{
+    background-color: #e51937;
+    border: white;
+}
+
+.nav.justify-content-left {
+    background-color: #D3D3D3;
+    padding-top: 3%;
+    padding-left:none;
+}
+
+
