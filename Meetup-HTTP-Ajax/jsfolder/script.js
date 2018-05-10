@@ -9,9 +9,9 @@
 //     this.membercount = infoParams.membercount;
 //   }
 // }
+
 class Meetups {
-    constructor(localStorageKey) {
-    // this.localStorageKey = localStorageKey;
+    constructor(localStorageKey) { 
     this.localStorageKey = localStorageKey;
     this.refreshApiUrl = "https://api.meetup.com/2/cities?key=61582d1f43754f1e42e74e36104b2c&";
   }
@@ -20,7 +20,6 @@ class Meetups {
     this.bindEvents();
     this.$searchByParams = $(".searchbutton");
     this.$returnResults = $(".searchbutton");
-    this.$formClone = $("#formid").clone();
   }
 
   bindEvents() {
@@ -51,23 +50,22 @@ class Meetups {
       "<td>" + response.results[i].city + "</td>" + 
       "<td>" + response.results[i].ranking + "</td>" + 
       "<td>" + response.results[i].state + "</td>" + 
-      "<td>" + response.results[i].member_count + "</td></thead></tr>");
+      "<td>" + response.results[i].member_count + "</td></tr>");
       $("#formid")[0].reset();
     }
-    return localStorage.setItem(this.localStorageKey, JSON.stringify(response.results))
+      return localStorage.setItem(this.localStorageKey, JSON.stringify(response.results));
   }
+
+
 }
+  
 
 
+$(document).ready(function () {
+  Meetups = new Meetups("key");
+  Meetups.initializationMethod();
+})
 
-
-
-
-
-  $(document).ready(function () {
-    Meetups = new Meetups();
-    Meetups.initializationMethod();
-  });
 
 
 
