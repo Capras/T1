@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="stylesfolder/bootstrap.css">
     <link rel="stylesheet" href="stylesfolder/styles.css">
   </head>
-    <div class="container-fluid">
+  <div class="container-fluid">
 
 
         <ul class="nav justify-content-left">
             <li class="nav-item image">
-              <img src="Images/meetuplogo.svg" class="img-rounded" alt="meetup">
+              <img src="Images/meetuplogo.svg" class="img-fluid" alt="meetup">
             </li>
             <div class="row">
                 <form id="formid">
@@ -35,23 +35,37 @@
                   <div class="col button">
                     <button type="submit" class="btn btn-secondary searchbutton">Search</button>
                   </div>
-                </div>
-              </div>
                 </form>
-          </ul>
-    <body>
-     
-      </body
+              </div>
+           </ul>
+  
+   
 
 
       <div class="row">
-        <ul id="listid"></ul>
-      </div>
+        <table id="listid" class="table table-striped table-hover">
+          <thead id="tablehead">
+            <tr>
+              <th>Zip Code</th>
+              <th>Country</th>
+              <th>City</th>
+              <th>Ranking</th>
+              <th>State</th>
+              <th>Member Count</th>
+            </tr>
+          </thead>
+          <tbody>
 
+          </tbody>
+        </table>
+      </div>
     </div>
+
+
+    </body>
         <script src="jsfolder/jQuery.js" charset="utf-8"></script>
         <script src="jsfolder/script.js" charset="utf-8"></script>
-    </body>
+
 
 
 </html>

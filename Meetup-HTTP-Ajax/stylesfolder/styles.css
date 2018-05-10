@@ -4,10 +4,11 @@
 }
 #listid {
     list-style-type: none;
+    margin-left: 3%;
   }
 
 #formid {
-    margin-left: -20%;
+    margin-left: -36%;
 }
 
 .button {
@@ -15,9 +16,10 @@
     color:	#e51937;
 }
 
-img.img-rounded {
-    width:40%;
+img.img-fluid {
+    width:32%;
     margin-bottom: 8%;
+    margin-left: 3%;
 }
 
 body > div > ul.nav.justify-content-left > li {
