@@ -44,6 +44,7 @@ Library.prototype.removeBookByTitle = function (title) {
     var removedTitle = this._booksArray[i];
 
     if (removedTitle.title == title) {
+    this.deleteBookFromDatabase(this._booksArray[i]);
       this._booksArray.splice(i, 1);
       // this.setLibraryObject();
       return true;
@@ -147,7 +148,7 @@ Library.prototype.buildTable = function () {
   this.table = $("#table_id").DataTable({
     data: this._booksArray,
     columns: [
-      // { data: "_id", defaultcontent: "", visible: false },
+
       {
         data: "cover", render: function (data, type, row, meta) {
           return (" <img class=\"cover\"src=" + row.cover + ">");
@@ -242,10 +243,16 @@ Library.prototype.addBooksToLibrary = function () {
 Library.prototype.removeRow = function (e) {
   var tableRow = $(e.currentTarget).parent().parent();
   var title = tableRow.children("td:nth-child(2)").text();
-  this.removeBookByTitle(title);
-  this.table.row(tableRow).remove();
-  this.table.draw(false);
-};
+  // if (this.deleteBookFromDatabase(title)) {
+    this.removeBookByTitle(title);
+    this.table.destroy();
+    this.buildTable();
+  }
+  // else {
+  // console.log("not working")
+  // };
+
+// };
 
 
 
@@ -295,7 +302,6 @@ Library.prototype.addBookToDataBase = function(book) {
     _this._booksArray.push(book);
    _this.table.row.add(book);
     _this.table.draw();
-    console.log(response);
   })
 
 .fail(function(error) {
@@ -304,21 +310,25 @@ Library.prototype.addBookToDataBase = function(book) {
 }
 
 
-Library.prototype.deleteBookFromDatabase = function(book) {
+Library.prototype.deleteBookFromDatabase = function(title) {
+   _this = this;
   $.ajax ({
     dataType: 'json',
-    type:"DELTE",
-    url: "http://localhost:3000/library/",
-    data: book
-
-  }).done(function(response) {
-
+    type:"DELETE",
+    url: "http://localhost:3000/library/ + book.id",
+    path: "id"
   })
-
-  .fail(function(error) {
-      console.log(error);
-    });
 }
+
+//   }).done(function(response) {
+//     removeRow();
+//
+//   })
+//
+//   .fail(function(error) {
+//       console.log("not working");
+//     });
+// }
 
 
 //move to doc.ready with objects
