@@ -31,13 +31,12 @@ Library.prototype.addBook = function (book) {
       return false;
     }
   }
-  this._booksArray.push(book);
-  this.setLibraryObject();
+
+  this.addBookToDataBase(book);
+  // this.setLibraryObject();
   // this.renderUpdate();
   return true;
 };
-
-
 
 // If books are removed, true. Otherwise, false.
 Library.prototype.removeBookByTitle = function (title) {
@@ -46,17 +45,14 @@ Library.prototype.removeBookByTitle = function (title) {
 
     if (removedTitle.title == title) {
       this._booksArray.splice(i, 1);
-      this.setLibraryObject();
+      // this.setLibraryObject();
       return true;
     }
   }
   return false;
 };
 
-//title=parameter
-// removeBookByTitle and removedTitle = methods
-// var i = sets up the index, i < this._booksArray.length; i++ = checks the condition (i is less than the length of the array), i++ = increments the index by 1
-// i is the same thing as "removedTitle"
+
 
 
 Library.prototype.removeBooksByAuthor = function (author) {
@@ -65,7 +61,7 @@ Library.prototype.removeBooksByAuthor = function (author) {
     if (this._booksArray[i].author === author) {
       this._booksArray.splice(i, 1);
       outcome = true;
-      this.setLibraryObject();
+      // this.setLibraryObject();
     }
   }
   return outcome;
@@ -131,80 +127,30 @@ Library.prototype.removeAllBooks = function () {
   var myArray = this._booksArray = [];
 };
 
-// **Practice**
-//   Library.prototype.removeAllBooks = function() {
-//     var myArray = this._booksArray = [];
-//     if(this.booksArray = []){
-//       return true;
-//     }
-//   }
-
-
-// function increaseValue() {
-//   var value = parseInt(document.getElementById('number').value, 10);
-//   value = isNaN(value) ? 0 : value;
-//   value++;
-//   document.getElementById('number').value = value;
-// }
-//
-// function decreaseValue() {
-//   var value = parseInt(document.getElementById('number').value, 10);
-//   value = isNaN(value) ? 0 : value;
-//   value < 1 ? value = 1 : '';
-//   value--;
-//   document.getElementById('number').value = value;
-// }
-
-
-//Work on this
-Library.prototype.filterForProperties = function (bookStringBeingPassed) {
-  var arrayToPushBooksTo = [];
-  this.getBooksByAuthor(bookStringBeingPassed);
-  arrayToPushBooksTo.push(this.getBooksByAuthor(bookStringBeingPassed));
-  this.getBookByTitle(bookStringBeingPassed);
-  arrayToPushBooksTo.push(this.getBookByTitle(bookStringBeingPassed));
-  return arrayToPushBooksTo;
-};
-
-
-//LOCAL STORAGE SECTION
-Library.prototype.setLibraryObject = function () {
-  localStorage.setItem(this.localStorageKey, JSON.stringify(this._booksArray));
-  return true;
-};
-
-Library.prototype.getLibraryObject = function () {
-  var getLocalStorageBooks = localStorage.getItem(this.localStorageKey);
-  if (getLocalStorageBooks !== null) {
-    var parseBooks = JSON.parse(getLocalStorageBooks);
-    for (var i = 0; i < parseBooks.length; i++) {
-      this.addBook(new Book(parseBooks[i]));
-    }
-  }
-};
 
 
 
 ////////////////JQUERY PROJECT PROTOTYPES //////////////////////////////
 
 Library.prototype.initializationMethod = function () {
-  this.getLibraryObject();
+  // this.getLibraryObject();
   this.$addBookBtn = $("#addbookbutton");
   $("#table_id").on("click", ".removeicon", $.proxy(this.removeRow, this));
   this.bookcount = 0;
   this.tempArray = [];
   this._bindEvents();
+  this.getBooksFromDataBase();
   this.buildTable();
-
 };
 
 Library.prototype.buildTable = function () {
   this.table = $("#table_id").DataTable({
     data: this._booksArray,
     columns: [
+      // { data: "_id", defaultcontent: "", visible: false },
       {
-        data: "image", render: function (data, type, row, meta) {
-          return (" <img class=\"cover\"src=" + row.image + ">");
+        data: "cover", render: function (data, type, row, meta) {
+          return (" <img class=\"cover\"src=" + row.cover + ">");
         }
       },
       { data: "title" },
@@ -224,7 +170,6 @@ Library.prototype._bindEvents = function () {
   $('#addbookbutton').on('click', $.proxy(this.addBookToTempArray, this));
   $('#addbooksbutton').on('click', $.proxy(this.addBooksToLibrary, this));
   $("#modal").on('show.bs.modal', $.proxy(this.buildRecModal, this));
-  $("#addallbooks").on('click', $.proxy(this.addAllBooks, this));
   $("#getauthorsbutton").on("click", $.proxy(this.buildAuthorModal, this));
   $("#getauthorsmodalbody").on('click', '.deleteauth', $.proxy(this.attachTableToAuthModal, this));
 };
@@ -264,14 +209,14 @@ Library.prototype.attachTableToAuthModal = function (e) {
 
 // Pushing each book to temp array on "addBook" //
 Library.prototype.addBookToTempArray = function () {
-  var image = $("#uploadImage").val();
+  var cover = $("#uploadImage").val();
   var title = $(".formTitle").val();
   var author = $(".formAuthor").val();
   var pages = $(".formPages").val();
   var date = $(".formPubDate").val();
   var button = $(".formRemoveImage").val();
   $("#uploadImage, .formTitle, .formAuthor, .formPages, .formPubDate, .formRemoveImage").val("");
-  var book = new Book({ image: image, title: title, author: author, numPages: pages, publishDate: date, removeButtonImg: button });
+  var book = new Book({ cover: cover, title: title, author: author, numPages: pages, publishDate: date, removeButtonImg: button });
   this.tempArray.push(book);
 
   this.bookcount++;
@@ -282,9 +227,8 @@ Library.prototype.addBookToTempArray = function () {
 Library.prototype.addBooksToLibrary = function () {
   var self = this;
   this.tempArray.forEach(function (book) {
-    //should change forEach to for loop?
     self.addBook(book);
-    self.table.row.add(book);
+    // self.table.row.add(book);
   });
 
   this.bookcount = 0;
@@ -303,38 +247,90 @@ Library.prototype.removeRow = function (e) {
   this.table.draw(false);
 };
 
-// Library.prototype.addAllBooks = function() {
-//   this.addBooks();
-// };
-
-
-
-// Testing Singleton//
-// var singleA = SarLibrary_instance.getInstance();
-// var singleB = SarLibrary_instance.getInstance();
-// console.log( singleA === singleB ); // true
 
 
 // Book Constructor
 var Book = function (bookparams) {
-  this.image = bookparams.image;
+  this.cover = bookparams.cover;
   this.title = bookparams.title;
   this.author = bookparams.author;
   this.numPages = bookparams.numPages;
   this.publishDate = new Date(bookparams.pubDate);
-  this.removeButtonImg = bookparams.removeButtonImg;
+  // this.removeButtonImg = bookparams.removeButtonImg;
+  this._id = bookparams._id;
 };
+
+Library.prototype.getBooksFromDataBase = function() {
+     _this = this;
+     $.ajax ({
+       dataType: 'json',
+       type:"GET",
+       url: "http://localhost:3000/library/",
+
+     }).done(function(response) {
+       for (i = 0; i < response.length; i++) {
+         book = new Book(response[i]);
+         _this._booksArray.push(book);
+         _this.table.row.add(book);
+       }
+       _this.table.draw();
+       console.log(response);
+
+     }).fail(function(error) {
+       console.log(error);
+     });
+   }
+
+Library.prototype.addBookToDataBase = function(book) {
+  // _this = this;
+  $.ajax ({
+    dataType: 'json',
+    type:"POST",
+    url: "http://localhost:3000/library/",
+    data: book
+
+
+  }).done(function(response) {
+    book = new Book(response);
+    _this._booksArray.push(book);
+   _this.table.row.add(book);
+    _this.table.draw();
+    console.log(response);
+  })
+
+.fail(function(error) {
+    console.log(error);
+  });
+}
+
+
+Library.prototype.deleteBookFromDatabase = function(book) {
+  $.ajax ({
+    dataType: 'json',
+    type:"DELTE",
+    url: "http://localhost:3000/library/",
+    data: book
+
+  }).done(function(response) {
+
+  })
+
+  .fail(function(error) {
+      console.log(error);
+    });
+}
+
 
 //move to doc.ready with objects
 
 // Book Objects
-var gPsychCyb = new Book({ image: "Images/PC.jpg", title: "Psycho-Cybernetics", author: "Maxwell Maltz", numPages: 310, pubDate: "November 17, 1960", removeButtonImg: "Images/removeicon.png" });
-var gIT = new Book({ image: "Images/itbook.jpg", title: "IT", author: "Stephen King", numPages: 800, pubDate: "December 17, 1995 03:24:00", removeButtonImg: "Images/removeicon.png" });
-var gCatcherInTheRye = new Book({ image: "Images/citr.jpg", title: "Catcher In The Rye", author: "JD Salinger", numPages: 200, pubDate: "December 22, 1951", removeButtonImg: "Images/removeicon.png" });
-var gPrisonerOfTehran = new Book({ image: "Images/pot.jpg", title: "Prisoner Of Tehran", author: "Marina Nemat", numPages: 400, pubDate: "January 20, 2007", removeButtonImg: "Images/removeicon.png" });
-var gTheObstacleIsTheWay = new Book({ image: "Images/oitw.jpg", title: "The Obstacle Is The Way", author: "Ryan Holiday", numPages: 240, pubDate: "January 21, 2014", removeButtonImg: "Images/removeicon.png" });
-var gTheArtOfWar = new Book({ image: "Images/aow.jpg", title: "The Art Of War", author: "Sun Tzu", numPages: 245, pubDate: "March 30, 1", removeButtonImg: "Images/removeicon.png" });
-var gStormOfTheCentury = new Book({ image: "Images/sotc.jpg", title: "Storm Of The Century", author: "Stephen King", numPages: 406, pubDate: "April 2, 1999,", removeButtonImg: "Images/removeicon.png" });
+// var gPsychCyb = new Book({ cover: "Images/PC.jpg", title: "Psycho-Cybernetics", author: "Maxwell Maltz", numPages: 310, pubDate: "November 17, 1960", removeButtonImg: "Images/removeicon.png" });
+// var gIT = new Book({ image: "Images/itbook.jpg", title: "IT", author: "Stephen King", numPages: 800, pubDate: "December 17, 1995 03:24:00", removeButtonImg: "Images/removeicon.png" });
+// var gCatcherInTheRye = new Book({ image: "Images/citr.jpg", title: "Catcher In The Rye", author: "JD Salinger", numPages: 200, pubDate: "December 22, 1951", removeButtonImg: "Images/removeicon.png" });
+// var gPrisonerOfTehran = new Book({ image: "Images/pot.jpg", title: "Prisoner Of Tehran", author: "Marina Nemat", numPages: 400, pubDate: "January 20, 2007", removeButtonImg: "Images/removeicon.png" });
+// var gTheObstacleIsTheWay = new Book({ image: "Images/oitw.jpg", title: "The Obstacle Is The Way", author: "Ryan Holiday", numPages: 240, pubDate: "January 21, 2014", removeButtonImg: "Images/removeicon.png" });
+// var gTheArtOfWar = new Book({ image: "Images/aow.jpg", title: "The Art Of War", author: "Sun Tzu", numPages: 245, pubDate: "March 30, 1", removeButtonImg: "Images/removeicon.png" });
+// var gStormOfTheCentury = new Book({ image: "Images/sotc.jpg", title: "Storm Of The Century", author: "Stephen King", numPages: 406, pubDate: "April 2, 1999,", removeButtonImg: "Images/removeicon.png" });
   // window.SarLibrary.addBook(gTheArtOfWar);
   // window.SarLibrary.addBook(gTheObstacleIsTheWay);
   // window.SarLibrary.addBook(gPsychCyb);

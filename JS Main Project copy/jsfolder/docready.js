@@ -3,7 +3,7 @@ $(document).ready(function () {
   window.SarLibrary = new Library ("sara");
   window.SarLibrary.initializationMethod();
 
-  
+
 
 
   // HOVER ON RANDOM BOOK BUTTON // put in doc.ready
