@@ -304,22 +304,6 @@ Library.prototype.addBookToDataBase = function(book) {
 }
 
 
-Library.prototype.deleteBookFromDatabase = function(book) {
-  $.ajax ({
-    dataType: 'json',
-    type:"DELTE",
-    url: "http://localhost:3000/library/",
-    data: book
-
-  }).done(function(response) {
-
-  })
-
-  .fail(function(error) {
-      console.log(error);
-    });
-}
-
 
 //move to doc.ready with objects
 
