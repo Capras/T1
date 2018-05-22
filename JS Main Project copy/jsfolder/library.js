@@ -1,5 +1,3 @@
-
-
 //New Library Instance
 (function () {
   var SarLibrary_instance; //defining somewhere for our instance to go on the window. It's a placeholder because the instance has to be set to something and this allows me to do that. Assigning the instance to a variable.
@@ -13,6 +11,7 @@
   }
   SarLibrary_instance = this; //once the instance is created, assign it to the instance.
 })();
+
 
 //Library Instance
 // var SarLibrary = new Library("sara");
@@ -128,8 +127,6 @@ Library.prototype.removeAllBooks = function () {
 };
 
 
-
-
 ////////////////JQUERY PROJECT PROTOTYPES //////////////////////////////
 
 Library.prototype.initializationMethod = function () {
@@ -143,11 +140,18 @@ Library.prototype.initializationMethod = function () {
   this.buildTable();
 };
 
+// Library.prototype.clickDelete = function(e) {
+//   $("body").on("click", ".removeicon", function(e) {
+//       var bookId = e.target.parentNode.parentNode.childNodes[0].innerText;
+//       _this.deleteBookFromDatabase(bookId);
+//   })
+// }
+
 Library.prototype.buildTable = function () {
   this.table = $("#table_id").DataTable({
     data: this._booksArray,
     columns: [
-      // { data: "_id", defaultcontent: "", visible: false },
+      { data: "_id"},
       {
         data: "cover", render: function (data, type, row, meta) {
           return (" <img class=\"cover\"src=" + row.cover + ">");
@@ -157,6 +161,11 @@ Library.prototype.buildTable = function () {
       { data: "author" },
       { data: "numPages" },
       { data: "publishDate" },
+      // {
+      //   data: "edit", render: function (data, type, row, meta) {
+      //     return("<button class=\"edit-btn\">Edit</button>");
+      //   }
+      // },
       {
         data: "image", render: function (data, type, row, meta) {
           return (" <img class=\"removeicon\"src=\"Images/removeicon.png\">");
@@ -172,11 +181,18 @@ Library.prototype._bindEvents = function () {
   $("#modal").on('show.bs.modal', $.proxy(this.buildRecModal, this));
   $("#getauthorsbutton").on("click", $.proxy(this.buildAuthorModal, this));
   $("#getauthorsmodalbody").on('click', '.deleteauth', $.proxy(this.attachTableToAuthModal, this));
+  // $('.edit-btn').on('click', function(){
+  //   $('body').addClass("modal-open");
+  //   $('#editBook').addClass("modal show");
+  //
+  // })
+  // $.proxy(this.updateBookInDb, this));
 };
 
 //Recommending a random book once "Get Book Recommendation" is clicked //
 Library.prototype.buildRecModal = function () {
   var book = this.getRandomBook();
+  $("#modalimage").attr('src', book.image);
   $("#modalimage").attr('src', book.image);
   $("#modaltitle").text(book.title);
   $("#modalauthor").text('Author: ' + book.author);
@@ -206,7 +222,6 @@ Library.prototype.attachTableToAuthModal = function (e) {
 
 };
 
-
 // Pushing each book to temp array on "addBook" //
 Library.prototype.addBookToTempArray = function () {
   var cover = $("#uploadImage").val();
@@ -223,7 +238,6 @@ Library.prototype.addBookToTempArray = function () {
   $('#output').html("You have " + this.bookcount + " book(s) in your library");
 };
 
-
 Library.prototype.addBooksToLibrary = function () {
   var self = this;
   this.tempArray.forEach(function (book) {
@@ -237,17 +251,16 @@ Library.prototype.addBooksToLibrary = function () {
   $('#output').html("You have " + this.bookcount + " book(s) in your library");
 };
 
-
 // REMOVE ROW BY BOOK TITLE //
 Library.prototype.removeRow = function (e) {
   var tableRow = $(e.currentTarget).parent().parent();
   var title = tableRow.children("td:nth-child(2)").text();
+  var id = e.target.parentNode.childNodes[0].innerText;
+  // this.clickDelete(e);
   this.removeBookByTitle(title);
   this.table.row(tableRow).remove();
   this.table.draw(false);
 };
-
-
 
 // Book Constructor
 var Book = function (bookparams) {
@@ -256,6 +269,7 @@ var Book = function (bookparams) {
   this.author = bookparams.author;
   this.numPages = bookparams.numPages;
   this.publishDate = new Date(bookparams.pubDate);
+  // this.edit = bookparams.edit;
   // this.removeButtonImg = bookparams.removeButtonImg;
   this._id = bookparams._id;
 };
@@ -264,9 +278,8 @@ Library.prototype.getBooksFromDataBase = function() {
      _this = this;
      $.ajax ({
        dataType: 'json',
-       type:"GET",
+       type:'GET',
        url: "http://localhost:3000/library/",
-
      }).done(function(response) {
        for (i = 0; i < response.length; i++) {
          book = new Book(response[i]);
@@ -282,7 +295,6 @@ Library.prototype.getBooksFromDataBase = function() {
    }
 
 Library.prototype.addBookToDataBase = function(book) {
-  // _this = this;
   $.ajax ({
     dataType: 'json',
     type:"POST",
@@ -302,6 +314,47 @@ Library.prototype.addBookToDataBase = function(book) {
     console.log(error);
   });
 }
+
+Library.prototype.deleteBookFromDatabase = function (bookId) {
+   _this = this;
+   let bookID = bookId;
+  return $.ajax ({
+    url: 'http://localhost:3000/library/' + bookID,
+    type:'DELETE',
+    dataType: 'json'
+  }).done(function() {
+  })
+}
+
+$("body").on("click", this.deleteBookListener);
+
+function deleteBookListener(e) {
+  if (e.target.classList.contains("removeicon")) {
+    var bookId = e.target.parentNode.parentNode.childNodes[0].innerText;
+    _this.deleteBookFromDatabase(bookId);
+  }
+}
+
+//
+// Library.prototype.updateBookInDb = function (bookId, book) {
+//    _this = this;
+//    let bookID = bookId;
+//   return $.ajax ({
+//     url: 'http://localhost:3000/library/' + bookID,
+//     type:'PUT',
+//     dataType: 'json',
+//     data: book
+//   }).done(function() {
+//
+//   })
+//
+//
+//
+// }
+
+
+
+
 
 
 
