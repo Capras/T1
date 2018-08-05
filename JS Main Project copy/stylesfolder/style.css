@@ -67,7 +67,7 @@
   background-color: transparent;
   color: black;
   border-color: black;
-  margin-left: 20%;
+  margin-left: 15%;
 }
 
 #addallbooks {
@@ -107,10 +107,14 @@
   padding-bottom: 2%;
 }
 
+#editbookbutton {
+  background-color: transparent;
+  color: black;
+  border-color: black;
+  margin-left: 35%;
+}
 
-/* #upload{
-   display:none
-} */
+
 
 /* BOOTSTRAP TABLE */
 

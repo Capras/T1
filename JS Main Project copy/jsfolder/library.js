@@ -160,7 +160,8 @@ Library.prototype.buildTable = function () {
       { data: "publishDate" },
       {
         data: "image", render: function (data, type, row, meta) {
-          return (" <img class=\"removeicon\"src=\"Images/removeicon.png\">");
+          return ("<img class=\"removeicon\"src=\"Images/removeicon.png\"><img class=\"editbutton\"src=\"Images/pencil.png\">");
+
         }
       },
     ]
@@ -173,13 +174,15 @@ Library.prototype._bindEvents = function () {
   $("#modal").on('show.bs.modal', $.proxy(this.buildRecModal, this));
   $("#getauthorsbutton").on("click", $.proxy(this.buildAuthorModal, this));
   $("#getauthorsmodalbody").on('click', '.deleteauth', $.proxy(this.attachTableToAuthModal, this));
+  $("#editbookbutton").on("click", $.proxy(this.buildAuthorModal, this));
+  $("#editbutton").on('click', $.proxy(book.editBookFunction);
 };
 
 //Recommending a random book once "Get Book Recommendation" is clicked //
 Library.prototype.buildRecModal = function () {
   var book = this.getRandomBook();
   this.getRandomBookFromDb(book._id);
-  $("#modalimage").attr('src', book.image);
+  $("#modalimage").attr('src', book.cover);
   $("#modaltitle").text(book.title);
   $("#modalauthor").text('Author: ' + book.author);
   $("#modalpagenumbers").text('Number Of Pages: ' + book.numPages);
@@ -249,11 +252,7 @@ Library.prototype.removeRow = function (e) {
     this.table.destroy();
     this.buildTable();
   }
-  // else {
-  // console.log("not working")
-  // };
 
-// };
 
 
 
@@ -330,28 +329,18 @@ Library.prototype.getRandomBookFromDb = function(id) {
     url: "http://localhost:3000/library/" + id,
     path: "id"
   }).done(function(response) {
-    book = new Book(response);
-    $("#modalimage").attr('src', book.image);
-    $("#modaltitle").text(book.title);
-    $("#modalauthor").text('Author: ' + book.author);
-    $("#modalpagenumbers").text('Number Of Pages: ' + book.numPages);
-    $("#modalpublicationdate").text('Publication Date: ' + book.publishDate);
-    $("#modalremovebutton").attr('src', book.removeButtonImg);
-    $("#authormodal").on('click', book.buildAuthorModal);
-  })
+      book = new Book(response);
+      $("#modalimage").attr('src', book.image);
+      $("#modaltitle").text(book.title);
+      $("#modalauthor").text('Author: ' + book.author);
+      $("#modalpagenumbers").text('Number Of Pages: ' + book.numPages);
+      $("#modalpublicationdate").text('Publication Date: ' + book.publishDate);
+      $("#modalremovebutton").attr('src', book.removeButtonImg);
+      $("#authormodal").on('click', book.buildAuthorModal);
+    })
+  }
 
-}
 
-
-//   }).done(function(response) {
-//     removeRow();
-//
-//   })
-//
-//   .fail(function(error) {
-//       console.log("not working");
-//     });
-// }
 
 
 //move to doc.ready with objects
