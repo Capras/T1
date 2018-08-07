@@ -162,6 +162,7 @@ Library.prototype.buildTable = function () {
         data: "image", render: function (data, type, row, meta) {
           return (" <img class=\"removeicon\"src=\"Images/removeicon.png\">");
         }
+
       },
     ]
   });
