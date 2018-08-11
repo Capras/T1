@@ -31,8 +31,8 @@
 }
 
 .removeicon {
-  width: 40%;
-  margin-left: 25%;
+  width: 5s0%;
+  margin-left: 15%;
 }
 
 .getbookrec {
@@ -113,6 +113,11 @@
   border-color: black;
   margin-left:45%;
 }
+
+.edit-btn {
+  margin-left: 20%;
+}
+
 
 
 

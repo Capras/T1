@@ -172,7 +172,7 @@ Library.prototype.buildTable = function () {
       },
       {
         data: "image", render: function (data, type, row, meta) {
-          return (" <img class=\"removeicon\"src=\"Images/removeicon.png\">");
+          return ("<button class='btn btn-outline-secondary removeicon' type='submit'>Delete</button>");
         }
 
       },
@@ -184,6 +184,7 @@ Library.prototype._bindEvents = function () {
   $('#addbookbutton').on('click', $.proxy(this.addBookToTempArray, this));
   $('#addbooksbutton').on('click', $.proxy(this.addBooksToLibrary, this));
   $("#modal").on('show.bs.modal', $.proxy(this.buildRecModal, this));
+  $("#getauthorsbutton").on("click", $.proxy(this.buildAuthorModal, this));
   $("#getauthorsmodalbody").on('click', '.deleteauth', $.proxy(this.attachTableToAuthModal, this));
 };
 
