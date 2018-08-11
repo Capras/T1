@@ -32,7 +32,6 @@
         <p id="modalremovebutton"></p>
       </div>
       <div class="modal-footer">
-        <button id="modaladdbookbutton" type="button" class="btn btn-secondary">Add Book</button>
         <button type="button" class="btn btn-secondary modalclosebutton" data-dismiss="modal">Close</button>
       </div>
     </div>
@@ -63,23 +62,36 @@
 
 
 <!-- Edit Book Modal -->
-<div class="modal fade" id="editbook" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+<div class="modal fade" id="editbookmodal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Book</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
-      <div class="modal-body" id="editbookmodalbody">
+      <div class="modal-body modal-form">
+
+
+
+<!-- Edit Title and Author Form -->
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput"></label>
+        <input type="text" class="form-control editTitle" id="editTitle" placeholder="Title">
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Author</label>
+        <input type="text" class="form-control editAuthor" id="editAuthor" placeholder="Author">
+      </div>
+    </form>
+      </div>
+        <div class="modal-footer">
+          <button id="saveeditbutton" type="button" class="btn btn-secondary">Save
+          </button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 <!-- NAV BAR -->
@@ -108,7 +120,7 @@
             </button>
           </li>
           <li class="nav-item dropdown">
-          <button id="editbookbutton" type="button" class="btn btn-secondary"  data-toggle="modal" data-target="#editbook">
+          <button id="editbookbutton" type="button" class="btn btn-secondary"  data-toggle="modal" data-target="#editbookmodal">
             Edit Book
           </button>
         </li>
@@ -134,6 +146,7 @@
               <th>Author Name</th>
               <th>Number Of Pages</th>
               <th>Publication Date</th>
+              <th>Edit Book</th>
               <th>Remove Book</th>
             </tr>
         </thead>
@@ -161,10 +174,6 @@
             <label for="datePicker">Publication Date</label>
             <input type="date" id="datepicker" class="formPubDate">
           </div>
-          <!-- <div class="form-group">
-            <label for="exampleInputEmail1">Upload File</label>
-            <input type="text" class="form-control formTitle" id="uploadimage" type="file" aria-describedby="uploadImage" placeholder="Upload File">
-          </div> -->
 
             <button id="addbookbutton" type="button" class="btn btn-secondary">Add Book
             </button>

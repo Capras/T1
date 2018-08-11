@@ -18,6 +18,17 @@
 // var SarLibrary = new Library("sara");
 //
 
+// Book Constructor
+var Book = function (bookparams) {
+  this.cover = bookparams.cover;
+  this.title = bookparams.title;
+  this.author = bookparams.author;
+  this.numPages = bookparams.numPages;
+  this.publishDate = new Date(bookparams.pubDate);
+  this.removeButtonImg = bookparams.removeButtonImg;
+  this._id = bookparams._id;
+};
+
 
 Library.prototype.addBook = function (book) {
   if (Array.isArray(book)) {
@@ -54,15 +65,12 @@ Library.prototype.removeBookByTitle = function (title) {
 };
 
 
-
-
 Library.prototype.removeBooksByAuthor = function (author) {
   var outcome = false;
   for (var i = this._booksArray.length - 1; i >= 0; i--) {
     if (this._booksArray[i].author === author) {
       this._booksArray.splice(i, 1);
       outcome = true;
-      // this.setLibraryObject();
     }
   }
   return outcome;
@@ -71,6 +79,7 @@ Library.prototype.removeBooksByAuthor = function (author) {
 Library.prototype.getRandomBook = function () {
   return this._booksArray[Math.floor(Math.random() * this._booksArray.length)];
 };
+
 
 Library.prototype.getBookByTitle = function (title) {
   var testArray = [];
@@ -82,6 +91,7 @@ Library.prototype.getBookByTitle = function (title) {
   }
   return testArray;
 };
+
 
 Library.prototype.getBooksByAuthor = function (author) {
   var testArray = [];
@@ -129,12 +139,9 @@ Library.prototype.removeAllBooks = function () {
 };
 
 
-
-
 ////////////////JQUERY PROJECT PROTOTYPES //////////////////////////////
 
 Library.prototype.initializationMethod = function () {
-  // this.getLibraryObject();
   this.$addBookBtn = $("#addbookbutton");
   $("#table_id").on("click", ".removeicon", $.proxy(this.removeRow, this));
   this.bookcount = 0;
@@ -159,6 +166,11 @@ Library.prototype.buildTable = function () {
       { data: "numPages" },
       { data: "publishDate" },
       {
+        data: "edit", render: function (data, type, row, meta) {
+          return("<button class='btn btn-outline-secondary mt-3 edit-btn' data-toggle='modal' data-target='#editbookmodal'>Edit</button>");
+        }
+      },
+      {
         data: "image", render: function (data, type, row, meta) {
           return (" <img class=\"removeicon\"src=\"Images/removeicon.png\">");
         }
@@ -172,15 +184,15 @@ Library.prototype._bindEvents = function () {
   $('#addbookbutton').on('click', $.proxy(this.addBookToTempArray, this));
   $('#addbooksbutton').on('click', $.proxy(this.addBooksToLibrary, this));
   $("#modal").on('show.bs.modal', $.proxy(this.buildRecModal, this));
-  $("#getauthorsbutton").on("click", $.proxy(this.buildAuthorModal, this));
   $("#getauthorsmodalbody").on('click', '.deleteauth', $.proxy(this.attachTableToAuthModal, this));
 };
+
 
 //Recommending a random book once "Get Book Recommendation" is clicked //
 Library.prototype.buildRecModal = function () {
   var book = this.getRandomBook();
   this.getRandomBookFromDb(book._id);
-  $("#modalimage").attr('src', book.image);
+  $("#modalimage").attr('src', book.cover);
   $("#modaltitle").text(book.title);
   $("#modalauthor").text('Author: ' + book.author);
   $("#modalpagenumbers").text('Number Of Pages: ' + book.numPages);
@@ -231,7 +243,6 @@ Library.prototype.addBooksToLibrary = function () {
   var self = this;
   this.tempArray.forEach(function (book) {
     self.addBook(book);
-    // self.table.row.add(book);
   });
 
   this.bookcount = 0;
@@ -245,30 +256,12 @@ Library.prototype.addBooksToLibrary = function () {
 Library.prototype.removeRow = function (e) {
   var tableRow = $(e.currentTarget).parent().parent();
   var title = tableRow.children("td:nth-child(2)").text();
-  // if (this.deleteBookFromDatabase(title)) {
     this.removeBookByTitle(title);
     this.table.destroy();
     this.buildTable();
   }
-  // else {
-  // console.log("not working")
-  // };
 
-// };
-
-
-
-// Book Constructor
-var Book = function (bookparams) {
-  this.cover = bookparams.cover;
-  this.title = bookparams.title;
-  this.author = bookparams.author;
-  this.numPages = bookparams.numPages;
-  this.publishDate = new Date(bookparams.pubDate);
-  // this.removeButtonImg = bookparams.removeButtonImg;
-  this._id = bookparams._id;
-};
-
+// GET ALL BOOKS FROM DB //
 Library.prototype.getBooksFromDataBase = function() {
      _this = this;
      $.ajax ({
@@ -290,8 +283,8 @@ Library.prototype.getBooksFromDataBase = function() {
      });
    }
 
+// ADD BOOK(S) TO DB //
 Library.prototype.addBookToDataBase = function(book) {
-  // _this = this;
   $.ajax ({
     dataType: 'json',
     type:"POST",
@@ -311,7 +304,7 @@ Library.prototype.addBookToDataBase = function(book) {
   });
 }
 
-
+// DELETE A BOOK FROM DB //
 Library.prototype.deleteBookFromDatabase = function(book) {
    _this = this;
   $.ajax ({
@@ -322,6 +315,7 @@ Library.prototype.deleteBookFromDatabase = function(book) {
   })
 }
 
+// GET BOOK RECOMMENDATION FROM DB //
 Library.prototype.getRandomBookFromDb = function(id) {
   console.log(id);
    _this = this;
@@ -332,7 +326,7 @@ Library.prototype.getRandomBookFromDb = function(id) {
     path: "id"
   }).done(function(response) {
     book = new Book(response);
-    $("#modalimage").attr('src', book.image);
+    $("#modalimage").attr('src', book.cover);
     $("#modaltitle").text(book.title);
     $("#modalauthor").text('Author: ' + book.author);
     $("#modalpagenumbers").text('Number Of Pages: ' + book.numPages);
@@ -344,15 +338,8 @@ Library.prototype.getRandomBookFromDb = function(id) {
 }
 
 
-//   }).done(function(response) {
-//     removeRow();
-//
-//   })
-//
-//   .fail(function(error) {
-//       console.log("not working");
-//     });
-// }
+
+
 
 
 //move to doc.ready with objects
