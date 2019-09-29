@@ -1,1 +1,166 @@
-body{background-color: purple;}
+
+
+  .table {
+   background: LightGrey;
+   width: 22%;
+   height: 209%;
+   float:left;
+}
+
+.picture {
+  width: 200px;
+  height: 200px;
+  top: 1%;
+  margin-left: -100px;
+  position: absolute;
+}
+
+}
+.Contact {
+ text-align: center;
+ margin-top:0;
+}
+
+}
+.container1 {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	z-index: 2
+}
+
+.rectangle1 {
+	width: 600px;
+  height: 210px;
+	background: DarkSeaGreen;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  font-size: 55;
+  border: solid black 2px;
+}
+
+.rectangle2 {
+	width: 400px;
+  height: 80px;
+	background: DarkSeaGreen;
+  text-align: middle;
+  font-size: 16;
+
+}
+.center {
+  text-align: right;
+}
+
+.ribbon span {
+  content: "rectangle2";
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.center{
+ margin: auto;
+}
+
+
+.Orate {
+ text-align: left;
+ text-align: bottom;
+ font-size: 15;
+ padding-top: 1%;
+}
+
+.title1 {
+ text-align: left;
+ font-style:italic;
+ font-size: 12pt;
+}
+
+.title1 description {
+ font-size: 9;
+}
+
+.oratelist {
+ margin: 0;
+ margin: 0 auto;
+ font-size:14;
+}
+
+.unfoundation {
+ text-align: left;
+ text-align: bottom;
+ font-size: 15;
+ padding-top: 1%;
+}
+
+.title2 {
+ text-align: left;
+ font-style:italic;
+ font-size: 12pt;
+}
+
+.description2 {
+font-size: 9;
+}
+
+.unfoundationlist {
+  margin: 0;
+  margin: 0 auto;
+  font-size:14;
+}
+
+.CEB {
+ text-align: left;
+ text-align: bottom;
+ font-size: 15;
+ padding-top: 1%;
+}
+
+.title3 {
+  text-align: left;
+  font-style:italic;
+  font-size: 12pt;
+}
+
+.description3 {
+ font-size: 9;
+}
+
+
+
+.CEBlist {
+  margin: 0;
+  margin: 0 auto;
+  font-size:14;
+}
+
+.rectangle4 {
+	width: 600px;
+  height: 40px;
+	background: DarkSeaGreen;
+  text-align:center;
+}
+
+.rectanglefont {
+  font-size: 16;
+  font-style: bold;
+  vertical-align: middle;
+}
+
+.boardmember {
+ margin: 0;
+ margin: 0 auto;
+ font-size:14;
+}
+
+.boardmember {
+ margin: 0;
+ margin: 0 auto;
+ font-size:14;
+}
+
+.startupmentor {
+ margin: 0;
+ margin: 0 auto;
+ font-size:14;
+}
