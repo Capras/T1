@@ -1,0 +1,935 @@
+/*section 1*/
+@font-face
+{
+    font-family: 'Abraham Lincoln';
+    src: url('fonts/abrahamlincoln-webfont.woff2') format('woff2'),
+         url('fonts/abrahamlincoln-webfont.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'Gotham Black';
+    src: url('fonts/GothamBlack.woff2') format('woff2'),
+        url('fonts/GothamBlack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*
+{
+ margin: 0;
+ padding: 0;
+}
+
+.wrapper
+{
+  width: 1920px;
+  position: relative;
+  left: calc((100vw - 1920px)/2);
+  overflow: hidden;
+}
+
+ul
+{
+  margin: 0;
+  padding: 0;
+  margin-left: -42px;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+
+li
+{
+    display: inline;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 18px;
+}
+
+nav
+{
+  color: black;
+  font-size: 20px;
+  margin-bottom: -466px;
+}
+
+.brand
+{
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
+
+.brand h1
+{
+  color: white;
+  position: relative;
+  text-align: center;
+  font-style: normal;
+  width: 108px;
+  font-size: 26px;
+  font-family: "Gill Sans";
+  border: 1px solid;
+  padding: 7px;
+  letter-spacing: 4px;
+  font-weight: 620;
+  left: -13px;
+}
+
+.container.background1
+{
+    height: 1920px;
+    width: 1920px;
+    background-image: url('IMAGES/pageone/BACKGROUND1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container.font
+{
+    margin-top: -25px;
+}
+
+.container.font h1
+{
+  font-size: 87px;
+  width: 6em;
+  color: rgb(255, 168, 0);
+  text-transform: uppercase;
+  position: absolute;
+  left: 699px;
+  font-weight: 100;
+  top: 880px;
+  font-family: "Abraham Lincoln";
+}
+
+.container.font h4
+{
+  font-size: 28px;
+  width: 31em;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  position: absolute;
+  left: 559px;
+  top: 982px;
+  font-family: "Abraham Lincoln";
+  letter-spacing: 5px;
+  font-weight: 200;
+}
+
+.nav
+{
+ margin-top:21px;
+}
+
+.nav a
+{
+  color:white;
+  text-decoration: none;
+  font-family:"Abraham Lincoln";
+}
+
+.threesidesquare
+{
+  position: absolute;
+  color: white;
+  left: 901px;
+  top: 1300px;
+}
+
+.scroll
+{
+  color: white;
+  position: relative;
+  letter-spacing: 6px;
+  left: 893px;
+  top: -430px;
+  font-size: 28px;
+  font-family: "Abraham Lincoln";
+}
+
+.arrow
+{
+  position: relative;
+  color: white;
+  left: 922px;
+  top: -409px;
+}
+
+.sidesocial
+{
+  position: relative;
+  top: -2057px;
+  right: -747px;
+  font-size: 20px;
+  transform: rotate(-90deg);
+}
+
+.sidesocial a
+{
+ color:white;
+ text-decoration: none;
+ font-family:"Abraham Lincoln";
+}
+
+.phoneline
+{
+  position: relative;
+  top: -1900px;
+  right: -1681px;
+  height: 335px;
+}
+
+.phoneimage
+{
+  position: relative;
+  top: -1856px;
+  right: -1654px;
+}
+
+.purple
+{
+ width: 1920px;
+ height: 1340px;
+ background-color:rgb(105, 79, 202);
+}
+
+.paintbrushes
+{
+ width: 1413px;
+ height: 1000;
+ margin: -320px auto;
+ margin-left: 204px;
+}
+
+
+.purplecolumn
+{
+  width: 32%;
+  margin: -132px;
+  display: inline-block;
+  font-family: "Abraham Lincoln";
+  text-align: left;
+  color: white;
+  position: relative;
+  bottom: 30px;
+}
+
+.invites
+{
+font-size:100px
+}
+
+.headingthree
+{
+ font-size: 30px;
+}
+
+.purplemiddle
+{
+ width: 70%;
+ height: auto;
+ position: relative;
+ margin: 200px auto;
+}
+
+.compparagraphcolumn
+{
+ margin-top:20px;
+}
+
+.complexityparagraph
+{
+  font-family: "Poppins",sans-serif;
+  color: white;
+  display: inline-block;
+  width: 73%;
+  text-align: left;
+  margin-left: 500px;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.purplemiddle h1
+{
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  margin-left: -733px;
+  margin-top: -100px;
+  letter-spacing: 3px;
+  line-height: 70px;
+  font-size: 79px;
+  color: rgb(255, 255, 255);
+  font-family: "Abraham Lincoln";
+  font-weight: 100;
+}
+
+.column-wrapper
+{
+  width: 158%;
+  margin-top: 65px;
+  margin-left: -172px;
+}
+
+
+.column
+{
+  width: 25%;
+  display: inline-block;
+  font-family: "Poppins",sans-serif;
+  font-size: 11px;
+  text-align: left;
+  color:white;
+}
+
+.column-wrapper h4
+{
+ position: relative;
+ font-size: 29px;
+ color: rgb(255, 168, 0);
+ text-transform: uppercase;
+ font-family:"Abraham Lincoln";
+ margin-bottom: 5px;
+}
+
+.miniparagraph
+{
+ line-height:2;
+ font-size:15px;
+}
+
+.whiteline
+{
+  width:44px;
+  height:0px;
+  background-color: white;
+  position: relative;
+  margin-top:10px;
+  margin-bottom: 28px;
+}
+
+.bottomlines
+{
+  position: relative;
+  bottom: -157px;
+  right: 1016px;
+}
+
+.graycity
+{
+  width: 1920px;
+  background-image: url('IMAGES/WE LOVE OUR CLIENTS/WeAreUnity.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background position: center;
+  height: 1462px;
+}
+.graycity h1
+{
+  position: relative;
+  letter-spacing: 3px;
+  font-family: "Abraham Lincoln";
+  text-transform: uppercase;
+  font-size: 90px;
+  top: 277px;
+  right: 19px;
+}
+
+.takepride
+{
+  margin-top: 287px;
+  margin-left: -15px;
+  font-family: "Poppins",sans-serif;
+  font-size: 22px;
+  font-weight: 100;
+}
+.roundbutton
+{
+  color: black;
+  width: 227px;
+  margin-top: 45px;
+  margin-left: -14px;
+}
+
+.group2
+{
+  position: relative;
+  width: 1196px;
+  height: 1000px;
+  margin-left: 149px;
+  margin-top: 372px;
+  }
+
+  .twocolumn
+  {
+    width: 33%;
+    margin-left: -50px;
+    font-family: "Abraham Lincoln";
+    text-align: right;
+    color: black;
+    margin-top: -515px;
+    position: relative;
+    bottom: 30px;
+  }
+
+  .honoragain
+  {
+   font-size: 98px;
+   margin-top: 37px;
+  }
+
+.globalservice
+{
+font-size: 30px;
+}
+
+.whatwedo
+{
+  width: 32%;
+  margin-left: 330px;
+  text-align: left;
+  z-index: 10000;
+  margin-top: 300px;
+  position: absolute;
+}
+
+.whatwedo b
+{
+  font-family: "Abraham Lincoln";
+  color: rgb(255, 168, 0);
+  font-size:60px;
+}
+
+.whatwedo p
+{
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins";
+  position: relative;
+  z-index: 10000;
+  width: 387px;
+  top: 709px;
+  left: 415px;
+  line-height: 34px;
+}
+
+.exit
+{
+position: relative;
+top: 507px;
+left: 906px;
+width: 33px;
+height: 33px;
+}
+
+.prevnext
+{
+  font-family: "Abraham Lincoln";
+  font-size: 28px;
+  position: relative;
+  top: 369px;
+  left: -19px;
+}
+
+.although
+{
+  font-family: "Abraham Lincoln";
+  color: black;
+  font-size: 20px;
+  margin-top: 230px;
+  z-index: 1000000;
+}
+
+.maninboxpic
+{
+  position: absolute;
+  width: 1600px;
+  height: 664px;
+  margin-left: 190px;
+  margin-top: 800px;
+  z-index: 100;
+}
+
+.mancolumns
+{
+  float: right;
+  background: white;
+  position: relative;
+  margin-top: 540px;
+  background: none;
+  z-index: 1000;
+  left: -95px;
+}
+
+.mancolumnstext
+{
+  color: black;
+  line-height: 100px;
+  font-family: "Abraham Lincoln";
+  text-align: left;
+  margin-top: 402px;
+  margin-left: -440px;
+  z-index: 1000;
+}
+
+.mancolumnstwotext
+{
+  color: black;
+  line-height: 100px;
+  font-family: "Abraham Lincoln";
+  text-align: left;
+  margin-left: -173px;
+  margin-top: -300px;
+}
+
+/* Winter Background */
+.winter
+{
+  width: 1920px;
+  height: 2589px;
+  margin-top: 1160px;
+  background-image: url(IMAGES/newest/snowback.png);
+}
+
+.global
+{
+  width: 32%;
+  margin-left: 330px;
+  text-align: left;
+  z-index: 10000;
+  margin-top: 300px;
+  position: absolute;
+  text-align: center;
+}
+
+.global b
+{
+  font-family: "Abraham Lincoln";
+  color: black;
+  line-height: 36px;
+  font-size: 76px;
+}
+
+.global p
+{
+  color: black;
+  font-size: 27px;
+  letter-spacing: 3px;
+  font-family: "Abraham Lincoln";
+  position: relative;
+  width: 885px;
+  top: 959px;
+  left: 142px;
+  line-height: 46px;
+  white-space: nowrap;
+}
+
+.blackline
+{
+  width: 72px;
+  z-index: 1000000;
+  height: 1px;
+  background-color: black;
+  position: relative;
+  top: 1468px;
+  left: -49px;
+  transform: rotate(-90deg);
+}
+
+.customers
+{
+  margin-top: 1600px;
+  font-size: 16px;
+  color: black;
+  position: relative;
+  font-family: "Poppins";
+  text-align: center;
+  left: -37px;
+  top: -47px;
+}
+
+.reviews
+{
+margin-left: -66px;
+top: -13px;
+position: relative;
+width: 50%;
+}
+
+.firstwhiteboxreview
+{
+  color: black;
+  font-size: 60px;
+  font-family: "Georgia";
+}
+
+.firstwhiteboxreview p
+{
+  width: 19em;
+  word-wrap: break-word;
+  font-size: 13px;
+  position: relative;
+  left: -362px;
+  top: -244px;
+}
+
+.firstwhiteboxreview b
+{
+  font-weight: 100;
+  line-height: 2;
+}
+
+.firstwhiteboxreview pre
+{
+  bottom: 212px;
+  position: relative;
+  font-family: "Poppins";
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 100;
+  left: -363px;
+}
+
+.firstwhiteboxreview span
+{
+  color: gray;
+  bottom: 253px;
+  position: relative;
+  font-family: "Poppins";
+  font-size: 12px;
+  line-height: 2;
+  font-weight: 100;
+  left: -365px;
+}
+
+.oddbox-purplereview p
+{
+  width: 18em;
+  word-wrap: break-word;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: 100;
+  position: relative;
+  left: -35px;
+  top: -436px;
+  color:white;
+}
+
+.oddbox-purplereview pre
+{
+  bottom: 422px;
+  position: relative;
+  left: -35px;
+  font-family: "Poppins";
+  font-size: 13px;
+  color: rgb(255, 168, 0);
+}
+
+.oddbox-purplereview span
+{
+  bottom: 423px;
+  font-family: "Poppins";
+  left: -36px;
+  position: relative;
+  color: rgb(255, 168, 0);
+  font-size: 11px;
+}
+
+.secondwhiteboxreview p
+{
+  width: 19em;
+  word-wrap: break-word;
+  font-size: 14px;
+  position: relative;
+  left: 297px;
+  top: -585px;
+}
+
+.secondwhiteboxreview b
+{
+  font-weight: 100;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.secondwhiteboxreview pre
+{
+  font-family: "Poppins";
+  color: black;
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 100;
+  left: 295px;
+  bottom: 545px;
+  position: relative;
+}
+
+.secondwhiteboxreview span
+{
+  color: gray;
+  bottom: 550px;
+  position: relative;
+  font-family: "Poppins";
+  font-size: 11px;
+  line-height: 2;
+  font-weight: 100;
+  left: 296px;
+}
+
+.blackbox
+{
+ width: 1920px;
+ padding-bottom: 200px;
+ position: absolute;
+ top: 7927px;
+ background-color: black;
+}
+
+.brand2
+{
+ padding-top: 28px;
+ padding-bottom: 50px;
+}
+
+.brand2 h1
+{
+  color: white;
+  text-align: center;
+  font-style: normal;
+  width: 101px;
+  font-size: 26px;
+  font-family: "Gill Sans";
+  border: 1px solid;
+  padding: 7px;
+  letter-spacing: 2px;
+  font-weight: 620;
+  position: relative;
+  left: -32px;
+}
+
+.footerlayers
+{
+ margin-top: -64px;
+ position: relative;
+ left:-153px;
+}
+
+.number
+{
+ color: white;
+ font-size: 15px;
+ position: absolute;
+ left: 365px;
+ top: 57px;
+ font-family: "Roboto";
+}
+
+.mail
+{
+ font-size: 15px;
+ position: absolute;
+ left: 1266px;
+ top: 57px;
+ font-family: "Roboto";
+}
+
+.mail p
+{
+ color: rgb(105, 79, 202);
+ letter-spacing: 2px;
+
+}
+
+.mail b
+{
+ color: white;
+ font-weight: 500;
+}
+
+.aboutus
+{
+ color: white;
+ font-weight: 400;
+ position: absolute;
+ left: 327px;
+ top: 144px;
+ font-family: "Roboto";
+}
+
+.aboutus h3
+{
+ font-size: 18px;
+ font-weight: 500;
+ position: relative;
+ left: -102px;
+ top: 13px;
+}
+
+.aboutus p
+{
+ width: 25em;
+ top: 51px;
+ text-align: left;
+ position: absolute;
+ color: grey;
+ font-size: 13px;
+ font-family: "Roboto";
+ left: 203px;
+ line-height: 2
+}
+
+.socialmedia
+{
+  position: relative;
+  left: 203px;
+  letter-spacing: 11px;
+  top: 175px;
+}
+
+.newsletter h3
+{
+ color: white;
+ font-size: 18px;
+ position: absolute;
+ left: 965px;
+ top: 164px;
+ font-family: "Roboto";
+ font-weight: 500;
+}
+
+.newsletter p
+{
+ color: gray;
+ font-family: "Roboto";
+ font-size: 14px;
+ position: relative;
+ left: 106px;
+ top: -211px;
+ width: 15em;
+ text-align: left;
+}
+
+.newsletter h4
+{
+ font-size: 15px;
+ color: gray;
+ border: 10px solid gray;
+ border-width: 1px;
+ position: relative;
+ width: 214px;
+ height: 28px;
+ bottom: 177px;
+ left: 114px;
+ text-align: left;
+-webkit-padding-before: 14px;
+ padding-left: 8px;
+ font-weight: 500;
+ font-family: "Roboto";
+}
+
+.subscribe
+{
+ position: relative;
+ font-size: 16px;
+ top: -154px;
+ border: 2px;
+ width: 143px;
+ height: 25px;
+ left: 76px;
+ color: white;
+ font-weight: 100;
+ text-align: center;
+ padding: 5px;
+ padding-top: 14px;
+ padding-bottom: 7px;
+ font-family: "Roboto";
+ background-color: rgb(105, 79, 202);
+}
+
+.blog
+{
+ position: relative;
+ top: -343px;
+ left: 456px;
+ color: white;
+ font-family: "Roboto";
+ font-weight: 100;
+}
+
+.blog h5
+{
+ color: white;
+ font-size: 18px;
+ position: absolute;
+ left: 776px;
+ top: -60px;
+ font-family: "Roboto";
+ font-weight: 500;
+}
+
+.blog h6
+{
+ position: relative;
+ top: 2px;
+ left: -53px;
+ font-size: 15px;
+ font-family: "Roboto";
+ color: rgb(105, 79, 202);
+ font-weight: 100;
+}
+
+.blog2
+{
+ position: relative;
+ top: -306px;
+ left: 456px;
+ color: white;
+ font-family: "Roboto";
+ font-weight: 100;
+}
+
+.blog2 h5
+{
+ color: white;
+ font-size: 18px;
+ position: absolute;
+ left: 776px;
+ top: -64px;
+ font-family: "Roboto";
+ font-weight: 500;
+}
+
+.blog2 h6
+{
+ position: relative;
+ font-size: 25px;
+ top: 2px;
+ left: -54px;
+ font-size: 15px;
+ font-family: "Roboto";
+ color: rgb(105, 79, 202);
+ font-weight: 100;
+}
+
+.blog3 p
+{
+ color: white;
+ font-size: 15px;
+ position: relative;
+ left: 445px;
+ top: -276px;
+ font-family: "Roboto";
+ font-weight: 100;
+}
+
+.blog3 h6
+{
+ top: -275px;
+ left: 396px;
+ position: relative;
+ font-size: 15px;
+ font-family: "Roboto";
+ color: rgb(105, 79, 202);
+ font-weight: 100;
+}
